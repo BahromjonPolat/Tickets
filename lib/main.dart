@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ticket/view/widgets/home/home_page.dart';
+import 'package:ticket/view/screens/home/home_page.dart';
 
 void main() {
   runApp(const MyApp());
