@@ -2,7 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:ticket/core/components/exporting_packages.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => BottomNavBarProvider()),
+      ],
+      child: const MyApp(),
+    ),
+  );
 
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
@@ -20,7 +27,8 @@ class MyApp extends StatelessWidget {
       title: 'Ticket',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        canvasColor: ConstColors.background,
+        primaryColor: ConstColors.primaryOrange,
       ),
       home: const HomePage(),
     );
