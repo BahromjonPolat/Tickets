@@ -10,6 +10,7 @@ class HomePageBody extends StatelessWidget {
     return CustomScrollView(
       slivers: [
         HomeAppBar(),
+        SliverSizedBox.setHeight(45.0),
         _setCategory('For you', AssetIcons.filters),
       ],
     );
