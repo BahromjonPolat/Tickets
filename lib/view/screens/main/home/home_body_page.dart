@@ -7,7 +7,10 @@ class HomePageBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
-      
+      slivers: [
+        HomeAppBar(),
+
+      ],
     );
   }
 }

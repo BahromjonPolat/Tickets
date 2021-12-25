@@ -10,6 +10,7 @@ class HomeAppBar extends StatelessWidget with PreferredSizeWidget {
       centerTitle: true,
       backgroundColor: ConstColors.white,
       elevation: 0.5,
+      pinned: true,
       title: Text(
         'Home',
         style: TextStyle(

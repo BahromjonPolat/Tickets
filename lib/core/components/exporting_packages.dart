@@ -1,9 +1,12 @@
 
 // Screens
 export 'package:ticket/view/screens/main/home_page.dart';
+export 'package:ticket/view/screens/main/home/home_body_page.dart';
 
 // Widgets
+export 'package:ticket/view/widgets/topBar/home_page_app_bar.dart';
 export 'package:ticket/view/widgets/bottomBar/my_bottom_navigation_bar.dart';
+
 
 // Components
 export 'package:ticket/core/components/size_config.dart';
