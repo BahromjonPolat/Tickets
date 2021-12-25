@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:ticket/core/components/exporting_packages.dart';
 
-class MtText extends StatelessWidget {
+class MyText extends StatelessWidget {
   String data;
-  double size = 14.0;
-  Color color = ConstColors.black;
-  FontWeight weight = FontWeight.w500;
+  double size;
+  Color color;
+  FontWeight weight;
 
-  MtText(
+  MyText(
     this.data, {
     Key? key,
+    this.color = ConstColors.black,
+    this.weight = FontWeight.w500,
+    this.size = 14.0,
   }) : super(key: key);
 
   @override
@@ -17,7 +20,7 @@ class MtText extends StatelessWidget {
     return Text(
       data,
       style: TextStyle(
-        fontSize: getProportionateScreenWidth(14.0),
+        fontSize: getProportionateScreenWidth(size),
         fontWeight: weight,
         color: color,
       ),
