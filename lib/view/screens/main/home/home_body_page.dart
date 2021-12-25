@@ -15,7 +15,7 @@ class HomePageBody extends StatelessWidget {
     );
   }
 
-  _setCategory(String title, String assetIcon) => SliverToBoxAdapter(
+  SliverToBoxAdapter _setCategory(String title, String assetIcon) => SliverToBoxAdapter(
     child: Padding(
       padding: EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(16.0)),
       child: Row(
