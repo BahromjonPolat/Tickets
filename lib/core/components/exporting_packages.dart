@@ -19,5 +19,8 @@ export 'package:provider/provider.dart';
 // Providers
 export 'package:ticket/providers/bottom_nav_bar_provider.dart';
 
+// Themes
+export 'package:ticket/core/themes/main_theme.dart';
+
 // Others
 export 'package:flutter/services.dart';

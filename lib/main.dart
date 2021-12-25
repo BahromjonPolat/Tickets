@@ -26,10 +26,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Ticket',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        canvasColor: ConstColors.background,
-        primaryColor: ConstColors.primaryOrange,
-      ),
+      theme: MainTheme.light,
       home: const HomePage(),
     );
   }
