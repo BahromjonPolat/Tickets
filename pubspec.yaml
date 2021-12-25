@@ -39,6 +39,10 @@ flutter:
   uses-material-design: true
 
   assets:
+    # Images
+    - assets/images/
+
+    # Icons
     - assets/icons/BottomBar/
     - assets/icons/Buttons/
     - assets/icons/MapPins/

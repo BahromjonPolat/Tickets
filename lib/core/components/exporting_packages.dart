@@ -7,9 +7,11 @@ export 'package:ticket/view/screens/main/home/home_body_page.dart';
 export 'package:ticket/view/widgets/topBar/home_page_app_bar.dart';
 export 'package:ticket/view/widgets/bottomBar/my_bottom_navigation_bar.dart';
 export 'package:ticket/view/widgets/text/my_text_widget.dart';
+export 'package:ticket/view/widgets/card/recommended_large_card.dart';
 
 // Sliver Widgets
 export 'package:ticket/view/widgets/slivers/sliver_sized_box.dart';
+
 
 // Components
 export 'package:ticket/core/components/size_config.dart';

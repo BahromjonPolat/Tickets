@@ -12,6 +12,7 @@ class HomePageBody extends StatelessWidget {
         HomeAppBar(),
         SliverSizedBox.setHeight(45.0),
         _setCategory('For you', AssetIcons.filters),
+        SliverToBoxAdapter(child: RecommendedLargeCard(),)
       ],
     );
   }
