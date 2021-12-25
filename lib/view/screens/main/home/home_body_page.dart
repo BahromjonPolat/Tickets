@@ -12,21 +12,35 @@ class HomePageBody extends StatelessWidget {
         HomeAppBar(),
         SliverSizedBox.setHeight(45.0),
         _setCategory('For you', AssetIcons.filters),
-        SliverToBoxAdapter(child: RecommendedLargeCard(),)
+        SliverToBoxAdapter(
+          child: SizedBox(
+            height: getProportionateScreenHeight(256.0),
+            child: ListView.builder(
+                padding: EdgeInsets.symmetric(
+                  horizontal: getProportionateScreenWidth(8.0),
+                ),
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (_, index) {
+                  return RecommendedLargeCard();
+                }),
+          ),
+        )
       ],
     );
   }
 
-  SliverToBoxAdapter _setCategory(String title, String assetIcon) => SliverToBoxAdapter(
-    child: Padding(
-      padding: EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(16.0)),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          MyText(title, size: 28.0, weight: FontWeight.w700),
-          MyIconButton(onPressed: (){}, assetIcon: assetIcon),
-        ],
-      ),
-    ),
-  );
+  SliverToBoxAdapter _setCategory(String title, String assetIcon) =>
+      SliverToBoxAdapter(
+        child: Padding(
+          padding: EdgeInsets.symmetric(
+              horizontal: getProportionateScreenWidth(16.0)),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              MyText(title, size: 28.0, weight: FontWeight.w700),
+              MyIconButton(onPressed: () {}, assetIcon: assetIcon),
+            ],
+          ),
+        ),
+      );
 }

@@ -7,6 +7,7 @@ class MyIconButton extends StatelessWidget {
   Color color;
   Color backgroundColor;
   double radius;
+  double iconSize;
 
   MyIconButton({
     required this.onPressed,
@@ -14,6 +15,7 @@ class MyIconButton extends StatelessWidget {
     this.color = ConstColors.red,
     this.backgroundColor = ConstColors.white,
     this.radius = 16.0,
+    this.iconSize = 24.0,
     Key? key,
   }) : super(key: key);
 
@@ -22,7 +24,12 @@ class MyIconButton extends StatelessWidget {
     return CircleAvatar(
       radius: getProportionateScreenWidth(radius),
       backgroundColor: backgroundColor,
-      child: SvgPicture.asset(assetIcon, color: color),
+      child: SvgPicture.asset(
+        assetIcon,
+        color: color,
+        height: getProportionateScreenHeight(iconSize),
+        width: getProportionateScreenWidth(iconSize),
+      ),
     );
   }
 }
