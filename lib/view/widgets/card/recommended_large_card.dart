@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ticket/core/components/exporting_packages.dart';
+import 'package:ticket/view/widgets/components/program_info.dart';
 
 class RecommendedLargeCard extends StatelessWidget {
   const RecommendedLargeCard({Key? key}) : super(key: key);
@@ -30,15 +31,13 @@ class RecommendedLargeCard extends StatelessWidget {
                 weight: FontWeight.w600,
               ),
               SizedBox(height: getProportionateScreenHeight(5.0)),
-              MyText(
-                'Bright light Music Festival',
-                color: ConstColors.white,
-                size: 22.0,
-                weight: FontWeight.w600,
-              ),
-              Row(children: [
-                TextWithIcon(AssetIcons.musicTag, 'Indie Rock'),
-              ],)
+              ProgramInfo(
+                label: 'Bright light Music Festival',
+                textList: [
+                  TextWithIcon(AssetIcons.musicTag, 'Indie Rock'),
+                  TextWithIcon(AssetIcons.ticket, 'Indie Rock'),
+                ],
+              )
             ],
           ),
         ),

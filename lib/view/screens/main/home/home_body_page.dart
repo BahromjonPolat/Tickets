@@ -12,6 +12,7 @@ class HomePageBody extends StatelessWidget {
         HomeAppBar(),
         SliverSizedBox.setHeight(45.0),
         _setCategory('For you', AssetIcons.filters),
+        SliverSizedBox.setHeight(24.0),
         SliverToBoxAdapter(
           child: SizedBox(
             height: getProportionateScreenHeight(256.0),
@@ -21,7 +22,8 @@ class HomePageBody extends StatelessWidget {
                 ),
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (_, index) {
-                  return RecommendedLargeCard();
+                  return const RecommendedLargeCard(
+                  );
                 }),
           ),
         )

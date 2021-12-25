@@ -20,7 +20,7 @@ class ProgramInfo extends StatelessWidget {
       children: [
         MyText(label, color: color, size: 22.0, weight: FontWeight.w600),
         SizedBox(height: getProportionateScreenHeight(8.0)),
-        Wrap(children: textList.map((e) => e).toList()),
+        Row(children: textList.map((e) => e).toList()),
       ],
     );
   }
