@@ -10,7 +10,6 @@ class MainTheme {
       style: ElevatedButton.styleFrom(
         elevation: 0.0,
         primary: ConstColors.red,
-
       ),
     ),
   );
