@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ticket/core/components/exporting_packages.dart';
-import 'package:ticket/view/widgets/buttons/my_icon_button.dart';
 
 class HomePageBody extends StatelessWidget {
   const HomePageBody({Key? key}) : super(key: key);
@@ -13,23 +12,43 @@ class HomePageBody extends StatelessWidget {
         SliverSizedBox.setHeight(45.0),
         _setCategory('For you', AssetIcons.filters),
         SliverSizedBox.setHeight(24.0),
-        SliverToBoxAdapter(
-          child: SizedBox(
-            height: getProportionateScreenHeight(256.0),
-            child: ListView.builder(
-                padding: EdgeInsets.symmetric(
-                  horizontal: getProportionateScreenWidth(8.0),
-                ),
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (_, index) {
-                  return const RecommendedLargeCard(
-                  );
-                }),
-          ),
-        )
+        _showForYouChild(),
+        _setSliverText('Collections'),
+        _showCollectionList(),
+        _setSliverText('Discover'),
       ],
     );
   }
+
+  SliverToBoxAdapter _showForYouChild() {
+    return SliverToBoxAdapter(
+      child: SizedBox(
+        height: getProportionateScreenHeight(256.0),
+        child: ListView.builder(
+            padding: EdgeInsets.symmetric(
+              horizontal: getProportionateScreenWidth(8.0),
+            ),
+            scrollDirection: Axis.horizontal,
+            itemBuilder: (_, index) {
+              return const RecommendedLargeCard();
+            }),
+      ),
+    );
+  }
+
+  SliverToBoxAdapter _showCollectionList() => SliverToBoxAdapter(
+        child: SizedBox(
+          height: getProportionateScreenHeight(161.0),
+          child: ListView.builder(
+              padding: EdgeInsets.symmetric(
+                horizontal: getProportionateScreenWidth(8.0),
+              ),
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+                return EventSmallCard();
+              }),
+        ),
+      );
 
   SliverToBoxAdapter _setCategory(String title, String assetIcon) =>
       SliverToBoxAdapter(
@@ -43,6 +62,17 @@ class HomePageBody extends StatelessWidget {
               MyIconButton(onPressed: () {}, assetIcon: assetIcon),
             ],
           ),
+        ),
+      );
+
+  SliverToBoxAdapter _setSliverText(String text) => SliverToBoxAdapter(
+        child: Padding(
+          padding: EdgeInsets.only(
+            left: getProportionateScreenWidth(16.0),
+            top: getProportionateScreenHeight(56.0),
+            bottom: getProportionateScreenHeight(25.0),
+          ),
+          child: MyText(text, size: 28.0, weight: FontWeight.w700),
         ),
       );
 }
