@@ -23,6 +23,8 @@ class HomePageBody extends StatelessWidget {
         _setCategory('Upcoming', AssetIcons.right),
         SliverSizedBox.setHeight(25.0),
         _showUpcomingLayout(),
+        _showUpcomingLayout(),
+        _showUpcomingLayout(),
         SliverSizedBox.setHeight(25.0),
       ],
     );
