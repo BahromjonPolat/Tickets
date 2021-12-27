@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:ticket/core/components/exporting_packages.dart';
 
 class HomePageBody extends StatelessWidget {
@@ -16,8 +17,72 @@ class HomePageBody extends StatelessWidget {
         _setSliverText('Collections'),
         _showCollectionList(),
         _setSliverText('Discover'),
+        _showDiscoveryCards(),
+        SliverSizedBox.setHeight(56.0),
+        _showLocationIcon(),
+        _setCategory('Upcoming', AssetIcons.right),
+        SliverSizedBox.setHeight(25.0),
+        _showUpcomingLayout(),
+        SliverSizedBox.setHeight(25.0),
       ],
     );
+  }
+
+  SliverToBoxAdapter _showUpcomingLayout() => SliverToBoxAdapter(child: Padding(
+    padding: MyEdgeInsets.symmetric(horizontal: 16.0),
+    child: Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        SizedBox(
+          height: getProportionateScreenHeight(276.0),
+          width: getProportionateScreenWidth(40.0),
+          child: Column(
+            children: [
+              DateCard(dateTime: DateTime.now()),
+              Flexible(
+                child: ListView.builder(
+                    itemCount: 12,
+                    padding: MyEdgeInsets.symmetric(vertical: 8.0),
+                    itemBuilder: (context, index) {
+                  return Container(
+                    alignment: Alignment.center,
+                    height: getProportionateScreenHeight(4.0),
+                    width: getProportionateScreenWidth(4.0),
+                    margin: MyEdgeInsets.symmetric(vertical: 8.0),
+                    decoration: BoxDecoration(
+                      color: ConstColors.grey,
+                      borderRadius: BorderRadius.circular(100.0),
+                    ),
+                  );
+                }),
+              )
+            ],
+          ),
+        ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            EventMediumCard(),
+            SizedBox(height: getProportionateScreenHeight(16.0)),
+            EventMoreCard(),
+          ],
+        ),
+      ],
+    ),
+  ),);
+
+  SliverToBoxAdapter _showLocationIcon() {
+    return SliverToBoxAdapter(
+        child: Padding(
+          padding: MyEdgeInsets.symmetric(horizontal: 16.0),
+          child: TextWithIcon(
+            AssetIcons.locationMisc,
+            'WARSHAW',
+            color: ConstColors.greyer,
+          ),
+        ),
+      );
   }
 
   SliverToBoxAdapter _showForYouChild() {
@@ -40,12 +105,27 @@ class HomePageBody extends StatelessWidget {
         child: SizedBox(
           height: getProportionateScreenHeight(161.0),
           child: ListView.builder(
-              padding: EdgeInsets.symmetric(
-                horizontal: getProportionateScreenWidth(8.0),
-              ),
+              padding: MyEdgeInsets.symmetric(horizontal: 8.0),
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
-                return EventSmallCard();
+                return const EventSmallCard();
+              }),
+        ),
+      );
+
+  SliverToBoxAdapter _showDiscoveryCards() => SliverToBoxAdapter(
+        child: SizedBox(
+          height: getProportionateScreenHeight(56.0),
+          child: ListView.builder(
+              padding: MyEdgeInsets.symmetric(horizontal: 8.0),
+              itemCount: 3,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+                return DiscoverCard(
+                  AssetIcons.navigation,
+                  'YOUR AREA',
+                  ConstColors.red,
+                );
               }),
         ),
       );

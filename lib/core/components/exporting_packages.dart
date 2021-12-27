@@ -7,16 +7,23 @@ export 'package:ticket/view/screens/main/home/home_body_page.dart';
 export 'package:ticket/view/widgets/topBar/home_page_app_bar.dart';
 export 'package:ticket/view/widgets/bottomBar/my_bottom_navigation_bar.dart';
 export 'package:ticket/view/widgets/text/my_text_widget.dart';
-export 'package:ticket/view/widgets/card/recommended_large_card.dart';
+export 'package:ticket/view/widgets/card/event_large_card.dart';
 export 'package:ticket/view/widgets/buttons/my_icon_button.dart';
 export 'package:ticket/view/widgets/text/text_with_icon.dart';
+export 'package:ticket/view/widgets/card/event_medium_card.dart';
+export 'package:ticket/view/widgets/card/event_small_card.dart';
+export 'package:ticket/view/widgets/card/discover_card.dart';
+export 'package:ticket/view/widgets/card/event_more_card.dart';
+export 'package:ticket/view/widgets/card/date_card.dart';
+
 
 // Sliver Widgets
 export 'package:ticket/view/widgets/slivers/sliver_sized_box.dart';
 
 // Widget components
 export 'package:ticket/view/widgets/components/decoration_with_image.dart';
-
+export 'package:ticket/view/widgets/components/my_edge_insets.dart';
+export 'package:ticket/view/widgets/components/event_info.dart';
 
 // Components
 export 'package:ticket/core/components/size_config.dart';
@@ -25,6 +32,7 @@ export 'package:ticket/core/components/size_config.dart';
 export 'package:ticket/core/constants/asset_icons.dart';
 export 'package:ticket/core/constants/colors.dart';
 export 'package:ticket/core/constants/asset_images.dart';
+export 'package:ticket/core/constants/links.dart';
 
 // Packages
 export 'package:flutter_svg/flutter_svg.dart';

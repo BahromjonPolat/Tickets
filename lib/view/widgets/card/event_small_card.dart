@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:ticket/core/components/exporting_packages.dart';
 
 class EventSmallCard extends StatelessWidget {
@@ -10,6 +9,9 @@ class EventSmallCard extends StatelessWidget {
     return Container(
       height: getProportionateScreenHeight(161.0),
       width: getProportionateScreenWidth(319.0),
+      margin: EdgeInsets.symmetric(
+        horizontal: getProportionateScreenWidth(8.0),
+      ),
       padding: EdgeInsets.symmetric(
           horizontal: getProportionateScreenWidth(16.0),
           vertical: getProportionateScreenHeight(13.0)),
@@ -27,8 +29,7 @@ class EventSmallCard extends StatelessWidget {
             alignment: MainAxisAlignment.start,
             label: 'Bright light Music Festival',
             textList: [
-              TextWithIcon(AssetIcons.musicTag, 'Indie Rock'),
-              TextWithIcon(AssetIcons.ticket, '\$40 - \$90'),
+              TextWithIcon(AssetIcons.musicTag, 'Electronica'),
             ],
           ),
           _buildTextButton(),

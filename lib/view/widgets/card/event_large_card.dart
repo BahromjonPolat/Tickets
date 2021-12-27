@@ -15,7 +15,7 @@ class RecommendedLargeCard extends StatelessWidget {
           height: getProportionateScreenHeight(256.0),
           width: getProportionateScreenWidth(327.0),
           decoration: MyDecoration.setDecorationWithImage(
-            imageUrl: 'https://source.unsplash.com/random/5',
+            imageUrl: Links.random + '0',
             radius: 16.0,
             color: ConstColors.primaryOrange.withOpacity(0.2),
           ),

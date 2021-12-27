@@ -15,6 +15,8 @@ class DiscoverCard extends StatelessWidget {
       height: getProportionateScreenHeight(56.0),
       width: getProportionateScreenWidth(145.0),
       child: Card(
+        elevation: 0.5,
+        // shadowColor: color,
         color: ConstColors.white,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(100.0),
@@ -24,12 +26,11 @@ class DiscoverCard extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: CircleAvatar(
-                radius: getProportionateScreenWidth(20.0),
-                backgroundColor: color.withOpacity(0.35),
-                child: SvgPicture.asset(assetIcon, color: color),
-              ),
+                  radius: getProportionateScreenWidth(20.0),
+                  backgroundColor: color.withOpacity(0.35),
+                  child: SvgPicture.asset(assetIcon, color: color)),
             ),
-            MyText(label, color: color, size: 12.0 ,weight: FontWeight.w600),
+            MyText(label, color: color, size: 12.0, weight: FontWeight.w600),
           ],
         ),
       ),
