@@ -34,6 +34,9 @@ export 'package:ticket/core/constants/colors.dart';
 export 'package:ticket/core/constants/asset_images.dart';
 export 'package:ticket/core/constants/links.dart';
 
+// Models
+export 'package:ticket/models/discover_model.dart';
+
 // Packages
 export 'package:flutter_svg/flutter_svg.dart';
 export 'package:provider/provider.dart';
@@ -46,3 +49,4 @@ export 'package:ticket/core/themes/main_theme.dart';
 
 // Others
 export 'package:flutter/services.dart';
+export 'package:ticket/core/data/discover_list.dart';
