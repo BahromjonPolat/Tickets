@@ -6,6 +6,7 @@ class MyText extends StatelessWidget {
   double size;
   Color color;
   FontWeight weight;
+  TextAlign align;
 
   MyText(
     this.data, {
@@ -13,12 +14,14 @@ class MyText extends StatelessWidget {
     this.color = ConstColors.black,
     this.weight = FontWeight.w500,
     this.size = 14.0,
+    this.align = TextAlign.left,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Text(
       data,
+      textAlign: align,
       style: TextStyle(
         fontSize: getProportionateScreenWidth(size),
         fontWeight: weight,

@@ -16,7 +16,7 @@ class EventSmallCard extends StatelessWidget {
           horizontal: getProportionateScreenWidth(16.0),
           vertical: getProportionateScreenHeight(13.0)),
       alignment: Alignment.bottomCenter,
-      decoration: MyDecoration.setDecorationWithImage(
+      decoration: MyDecoration.withImage(
         imageUrl: 'https://source.unsplash.com/random/4',
         color: ConstColors.greyer,
         radius: 16.0,

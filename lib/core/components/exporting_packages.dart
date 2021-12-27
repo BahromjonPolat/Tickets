@@ -5,6 +5,7 @@ export 'package:ticket/view/screens/main/home/home_body_page.dart';
 export 'package:ticket/view/screens/main/tickets/tickets_page_body.dart';
 export 'package:ticket/view/screens/main/search/search_page_body.dart';
 export 'package:ticket/view/screens/main/profile/profile_page_body.dart';
+export 'package:ticket/view/screens/details/details_page.dart';
 
 // Widgets
 export 'package:ticket/view/widgets/topBar/home_page_app_bar.dart';
@@ -18,6 +19,8 @@ export 'package:ticket/view/widgets/card/event_small_card.dart';
 export 'package:ticket/view/widgets/card/discover_card.dart';
 export 'package:ticket/view/widgets/card/event_more_card.dart';
 export 'package:ticket/view/widgets/card/date_card.dart';
+export 'package:ticket/view/widgets/buttons/glass_button.dart';
+export 'package:ticket/view/widgets/topBar/details_page_app_bar.dart';
 
 
 // Sliver Widgets
@@ -27,6 +30,7 @@ export 'package:ticket/view/widgets/slivers/sliver_sized_box.dart';
 export 'package:ticket/view/widgets/components/decoration_with_image.dart';
 export 'package:ticket/view/widgets/components/my_edge_insets.dart';
 export 'package:ticket/view/widgets/components/event_info.dart';
+export 'package:ticket/view/widgets/components/my_sized_box.dart';
 
 // Components
 export 'package:ticket/core/components/size_config.dart';

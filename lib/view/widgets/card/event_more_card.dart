@@ -10,7 +10,7 @@ class EventMoreCard extends StatelessWidget {
       height: getProportionateScreenHeight(40.0),
       width: getProportionateScreenWidth(287.0),
       padding: MyEdgeInsets.symmetric(horizontal: 18.0),
-      decoration: MyDecoration.setDecorationWithImage(
+      decoration: MyDecoration.withImage(
           imageUrl: Links.random + '0',
           radius: 12.0,
           color: ConstColors.greyer),
