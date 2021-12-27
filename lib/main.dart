@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
       title: 'Ticket',
       debugShowCheckedModeBanner: false,
       theme: MainTheme.light,
-      home: const HomePage(),
+      home: HomePage(),
     );
   }
 }

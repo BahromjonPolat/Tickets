@@ -2,14 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:ticket/core/components/exporting_packages.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  HomePage({Key? key}) : super(key: key);
+  late BottomNavBarProvider _barProvider;
 
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-    return const Scaffold(
+    _barProvider = context.watch();
+    return  Scaffold(
       bottomNavigationBar: MyBottomNavigationBar(),
-      body: HomePageBody(),
+      body: _pageList[_barProvider.currentIndex],
     );
   }
+
+   List _pageList =[
+    HomePageBody(),
+    SearchPageBody(),
+    TicketsPageBody(),
+    ProfilePageBody(),
+  ];
 }

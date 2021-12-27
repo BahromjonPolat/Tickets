@@ -2,6 +2,9 @@
 // Screens
 export 'package:ticket/view/screens/main/home_page.dart';
 export 'package:ticket/view/screens/main/home/home_body_page.dart';
+export 'package:ticket/view/screens/main/tickets/tickets_page_body.dart';
+export 'package:ticket/view/screens/main/search/search_page_body.dart';
+export 'package:ticket/view/screens/main/profile/profile_page_body.dart';
 
 // Widgets
 export 'package:ticket/view/widgets/topBar/home_page_app_bar.dart';
