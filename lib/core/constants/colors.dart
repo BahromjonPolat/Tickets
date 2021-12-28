@@ -14,4 +14,5 @@ class ConstColors {
   static const Color green = Color(0xFF33B86B);
   static const Color primaryOrange = Color(0xFFE69960);
   static const Color greyer = Color(0xFF989898);
+  static const Color grey68 = Color(0xFF616368);
 }

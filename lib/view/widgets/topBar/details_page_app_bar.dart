@@ -8,7 +8,9 @@ class DetailsPageAppBar extends StatelessWidget with PreferredSizeWidget {
   Widget build(BuildContext context) {
     return SliverAppBar(
       expandedHeight: getProportionateScreenHeight(520.0),
-      backgroundColor: ConstColors.blue,
+      backgroundColor: ConstColors.darkNavy,
+      pinned: true,
+      // floating: true,
       flexibleSpace: const FlexibleSpaceBar(
         background: FadeInImage(
           fit: BoxFit.cover,

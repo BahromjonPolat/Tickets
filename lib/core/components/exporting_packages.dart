@@ -10,18 +10,24 @@ export 'package:ticket/view/screens/details/details_page.dart';
 // Widgets
 export 'package:ticket/view/widgets/topBar/home_page_app_bar.dart';
 export 'package:ticket/view/widgets/bottomBar/my_bottom_navigation_bar.dart';
+export 'package:ticket/view/widgets/bottomBar/tickets_price_dark.dart';
+export 'package:ticket/view/widgets/bottomBar/ticket_price_light.dart';
 export 'package:ticket/view/widgets/text/my_text_widget.dart';
 export 'package:ticket/view/widgets/card/event_large_card.dart';
 export 'package:ticket/view/widgets/buttons/my_icon_button.dart';
+export 'package:ticket/view/widgets/buttons/white_button.dart';
+export 'package:ticket/view/widgets/buttons/my_text_button.dart';
 export 'package:ticket/view/widgets/text/text_with_icon.dart';
 export 'package:ticket/view/widgets/card/event_medium_card.dart';
 export 'package:ticket/view/widgets/card/event_small_card.dart';
 export 'package:ticket/view/widgets/card/discover_card.dart';
 export 'package:ticket/view/widgets/card/event_more_card.dart';
 export 'package:ticket/view/widgets/card/date_card.dart';
+export 'package:ticket/view/widgets/card/small_map_card.dart';
 export 'package:ticket/view/widgets/buttons/glass_button.dart';
+export 'package:ticket/view/widgets/buttons/default_button.dart';
 export 'package:ticket/view/widgets/topBar/details_page_app_bar.dart';
-
+export 'package:ticket/view/widgets/tables/table_with_circular_image.dart';
 
 // Sliver Widgets
 export 'package:ticket/view/widgets/slivers/sliver_sized_box.dart';
@@ -31,6 +37,8 @@ export 'package:ticket/view/widgets/components/decoration_with_image.dart';
 export 'package:ticket/view/widgets/components/my_edge_insets.dart';
 export 'package:ticket/view/widgets/components/event_info.dart';
 export 'package:ticket/view/widgets/components/my_sized_box.dart';
+export 'package:ticket/view/widgets/components/my_shape.dart';
+export 'package:ticket/view/widgets/components/my_border_radius.dart';
 
 // Components
 export 'package:ticket/core/components/size_config.dart';
@@ -50,6 +58,7 @@ export 'package:provider/provider.dart';
 
 // Providers
 export 'package:ticket/providers/bottom_nav_bar_provider.dart';
+export 'package:ticket/providers/details_page_ticket_price_provider.dart';
 
 // Themes
 export 'package:ticket/core/themes/main_theme.dart';

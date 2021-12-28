@@ -6,6 +6,7 @@ void main() {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => BottomNavBarProvider()),
+        ChangeNotifierProvider(create: (_)=> BottomTicketPriceProvider()),
       ],
       child: const MyApp(),
     ),

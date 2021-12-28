@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:ticket/core/components/exporting_packages.dart';
 
 class BottomBarTicketPriceDark extends StatelessWidget {
