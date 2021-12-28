@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ticket/core/components/exporting_packages.dart';
 
-class TicketsTimeAppBar extends StatelessWidget with PreferredSizeWidget{
+class TicketsTimeAppBar extends StatelessWidget with PreferredSizeWidget {
   const TicketsTimeAppBar({Key? key}) : super(key: key);
 
   @override
@@ -11,14 +11,15 @@ class TicketsTimeAppBar extends StatelessWidget with PreferredSizeWidget{
       elevation: 0.0,
       systemOverlayStyle: SystemUiOverlayStyle.dark,
       automaticallyImplyLeading: false,
-      title: MyText('WARSHAW',size: 28, weight: FontWeight.w700),
+      title: MyText('WARSHAW', size: 28, weight: FontWeight.w700),
       actions: [
-        MyIconButton(onPressed: (){}, assetIcon: AssetIcons.calendar),
+        MyIconButton(onPressed: () {}, assetIcon: AssetIcons.calendar),
       ],
     );
   }
 
   @override
   // TODO: implement preferredSize
-  Size get preferredSize => Size(double.infinity, getProportionateScreenHeight(61.0));
+  Size get preferredSize =>
+      Size(double.infinity, getProportionateScreenHeight(61.0));
 }
