@@ -5,25 +5,31 @@ class TextWithIcon extends StatelessWidget {
   String assetIcon;
   String text;
   Color color;
+  FontWeight weight;
+  double width;
+  double textSize;
 
   TextWithIcon(
     this.assetIcon,
     this.text, {
     Key? key,
     this.color = ConstColors.white,
+    this.weight = FontWeight.w600,
+    this.width = 4.3,
+    this.textSize = 12,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        SvgPicture.asset(assetIcon, color: color.withOpacity(0.6)),
-        SizedBox(width: getProportionateScreenWidth(4.3)),
+        SvgPicture.asset(assetIcon, color: color),
+        SizedBox(width: getProportionateScreenWidth(width)),
         MyText(
           text,
-          color: color.withOpacity(0.6),
-          size: 12.0,
-          weight: FontWeight.w600,
+          color: color,
+          size: textSize,
+          weight: weight,
         ),
         SizedBox(width: getProportionateScreenWidth(6.77)),
       ],

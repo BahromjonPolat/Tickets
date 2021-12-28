@@ -31,6 +31,7 @@ class AssetIcons {
   static const String locationMisc = 'assets/icons/Misc/Location.svg';
   static const String navigation = 'assets/icons/Misc/Location-1.svg';
   static const String mapPin = 'assets/icons/Misc/MapPin.svg';
+  static const String dot = 'assets/icons/Misc/Dot.svg';
 
   // Property info icons
   static const String propertyType = 'assets/icons/PropertyInfo/PropertyType.svg';
