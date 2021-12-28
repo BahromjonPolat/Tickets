@@ -22,7 +22,8 @@ class DefaultButton extends StatelessWidget {
         weight: FontWeight.w600,
       ),
       style: ElevatedButton.styleFrom(
-          elevation: 0.0,
+          // elevation: 0.0,
+          shadowColor: ConstColors.red,
           primary: ConstColors.red,
           shape: MyShape.setCircularBorder(radius: 8.0),
           fixedSize: Size(
