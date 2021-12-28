@@ -17,7 +17,8 @@ class EventMediumCard extends StatelessWidget {
         radius: 16.0,
       ),
       child: EventInfo(
-        label: 'Bright light Music Festival',
+        label: 'Brightlight Music Festival',
+        textSize: 18.0,
         textList: [
           TextWithIcon(AssetIcons.musicTag, 'Indie Rock'),
           TextWithIcon(AssetIcons.ticket, '\$40 - \$90'),

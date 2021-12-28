@@ -37,6 +37,8 @@ class DetailsPageAppBar extends StatelessWidget with PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize =>
-      Size(double.infinity, getProportionateScreenHeight(520.0));
+  Size get preferredSize => Size(
+        double.infinity,
+        getProportionateScreenHeight(520.0),
+      );
 }

@@ -33,6 +33,7 @@ export 'package:ticket/view/widgets/topBar/details_page_app_bar.dart';
 export 'package:ticket/view/widgets/tables/table_with_circular_image.dart';
 export 'package:ticket/view/widgets/tables/table_ticket_date.dart';
 export 'package:ticket/view/widgets/tables/table_ticket_price.dart';
+export 'package:ticket/view/widgets/tables/table_event.dart';
 
 // Sliver Widgets
 export 'package:ticket/view/widgets/slivers/sliver_sized_box.dart';
@@ -57,9 +58,12 @@ export 'package:ticket/core/constants/links.dart';
 // Models
 export 'package:ticket/models/discover_model.dart';
 
-// Packages
+// Installed Packages
 export 'package:flutter_svg/flutter_svg.dart';
 export 'package:provider/provider.dart';
+export 'package:google_maps_flutter/google_maps_flutter.dart';
+export 'package:flutter_polyline_points/flutter_polyline_points.dart';
+export 'package:dio/dio.dart';
 
 // Providers
 export 'package:ticket/providers/bottom_nav_bar_provider.dart';

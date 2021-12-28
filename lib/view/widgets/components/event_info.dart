@@ -6,11 +6,13 @@ class EventInfo extends StatelessWidget {
   String label;
   Color color;
   MainAxisAlignment alignment;
+  double textSize;
   EventInfo({
     required this.label,
     required this.textList,
     this.color = ConstColors.white,
     this.alignment = MainAxisAlignment.end,
+    this.textSize = 22.0,
     Key? key,
   }) : super(key: key);
 
@@ -20,7 +22,7 @@ class EventInfo extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: alignment,
       children: [
-        MyText(label, color: color, size: 22.0, weight: FontWeight.w600),
+        MyText(label, color: color, size: textSize, weight: FontWeight.w600),
         SizedBox(height: getProportionateScreenHeight(8.0)),
         Row(children: textList.map((e) => e).toList()),
       ],

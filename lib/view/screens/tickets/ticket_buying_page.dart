@@ -45,7 +45,9 @@ class TicketBuyingPage extends StatelessWidget {
           TableTicketPrice(color: ConstColors.blue),
         ],
       ),
-      bottomNavigationBar: BottomBarTicketPriceLight(onPressed: (){},),
+      bottomNavigationBar: BottomBarTicketPriceLight(
+        onPressed: () {},
+      ),
     );
   }
 }

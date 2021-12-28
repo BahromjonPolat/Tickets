@@ -6,6 +6,15 @@ class SearchPageBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      padding: MyEdgeInsets.symmetric(horizontal: 16.0),
+      alignment: Alignment.center,
+      child: Column(
+        children: [
+          TableEvent(),
+          TableEvent(),
+        ],
+      ),
+    );
   }
 }
