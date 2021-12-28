@@ -2,7 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:ticket/core/components/exporting_packages.dart';
 
 class BottomBarTicketPriceDark extends StatelessWidget {
-  const BottomBarTicketPriceDark({Key? key}) : super(key: key);
+  VoidCallback onPressed;
+
+  BottomBarTicketPriceDark({
+    Key? key,
+    required this.onPressed,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +40,7 @@ class BottomBarTicketPriceDark extends StatelessWidget {
             child: Padding(
               padding: MyEdgeInsets.symmetric(horizontal: 15.0),
               child: WhiteButton(
-                onPressed: () {},
+                onPressed: onPressed,
                 label: 'Buy Tickets',
               ),
             ),

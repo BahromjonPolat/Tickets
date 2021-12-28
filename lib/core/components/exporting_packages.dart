@@ -6,9 +6,11 @@ export 'package:ticket/view/screens/main/tickets/tickets_page_body.dart';
 export 'package:ticket/view/screens/main/search/search_page_body.dart';
 export 'package:ticket/view/screens/main/profile/profile_page_body.dart';
 export 'package:ticket/view/screens/details/details_page.dart';
+export 'package:ticket/view/screens/tickets/tickets_time_page.dart';
 
 // Widgets
 export 'package:ticket/view/widgets/topBar/home_page_app_bar.dart';
+export 'package:ticket/view/widgets/topBar/tickets_time_app_bar.dart';
 export 'package:ticket/view/widgets/bottomBar/my_bottom_navigation_bar.dart';
 export 'package:ticket/view/widgets/bottomBar/tickets_price_dark.dart';
 export 'package:ticket/view/widgets/bottomBar/ticket_price_light.dart';
@@ -28,6 +30,7 @@ export 'package:ticket/view/widgets/buttons/glass_button.dart';
 export 'package:ticket/view/widgets/buttons/default_button.dart';
 export 'package:ticket/view/widgets/topBar/details_page_app_bar.dart';
 export 'package:ticket/view/widgets/tables/table_with_circular_image.dart';
+export 'package:ticket/view/widgets/tables/table_ticket_date.dart';
 
 // Sliver Widgets
 export 'package:ticket/view/widgets/slivers/sliver_sized_box.dart';

@@ -6,9 +6,11 @@ class DetailsPage extends StatelessWidget {
   final ScrollController _scrollController = ScrollController();
 
   late BottomTicketPriceProvider _provider;
+  late BuildContext _context;
 
   @override
   Widget build(BuildContext context) {
+    _context = context;
     _provider = context.watch();
     return Scaffold(
       backgroundColor: ConstColors.darkNavy,
@@ -27,8 +29,8 @@ class DetailsPage extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: _provider.isDark
-          ? BottomBarTicketPriceDark()
-          : BottomBarTicketPriceLight(),
+          ? BottomBarTicketPriceDark(onPressed: _onBuyTicketsPressed)
+          : BottomBarTicketPriceLight(onPressed: _onBuyTicketsPressed),
     );
   }
 
@@ -207,6 +209,11 @@ class DetailsPage extends StatelessWidget {
               )),
         ],
       );
+
+  void _onBuyTicketsPressed() {
+    Navigator.push(
+        _context, MaterialPageRoute(builder: (_) => TicketsTimePage()));
+  }
 
   final String _detailText =
       'Free directories: directories are perfect for customers that are searching for a particular topic. What’s great about them is that you only have to post once and they are good for long periods of time. It saves a lot of your time when you don’t have to resubmit your information every week…';
