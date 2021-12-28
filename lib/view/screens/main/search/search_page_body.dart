@@ -10,9 +10,10 @@ class SearchPageBody extends StatelessWidget {
       padding: MyEdgeInsets.symmetric(horizontal: 16.0),
       alignment: Alignment.center,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          TableEvent(),
-          TableEvent(),
+          TablePlace(),
+          TablePlace(),
         ],
       ),
     );
