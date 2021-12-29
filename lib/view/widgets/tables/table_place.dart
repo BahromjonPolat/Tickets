@@ -50,6 +50,7 @@ class TablePlace extends StatelessWidget {
         Links.random,
         fit: BoxFit.cover,
         width: getProportionateScreenWidth(64.0),
+        height: getProportionateScreenHeight(64.0),
       ),
     );
   }

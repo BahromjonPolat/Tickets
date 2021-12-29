@@ -10,4 +10,8 @@ class MyEdgeInsets {
         horizontal: getProportionateScreenWidth(horizontal),
         vertical: getProportionateScreenHeight(vertical),
       );
+
+  static all(double radius) => EdgeInsets.all(
+        getProportionateScreenWidth(radius),
+      );
 }

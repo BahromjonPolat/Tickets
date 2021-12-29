@@ -13,6 +13,7 @@ class DateCard extends StatelessWidget {
       width: getProportionateScreenWidth(40.0),
       child: Card(
         margin: EdgeInsets.zero,
+        shape: MyShape.setCircularBorder(radius: 12.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -25,14 +26,7 @@ class DateCard extends StatelessWidget {
             ),
           ],
         ),
-        shape: _setCardShape(),
       ),
-    );
-  }
-
-  RoundedRectangleBorder _setCardShape() {
-    return RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(getProportionateScreenWidth(12.0)),
     );
   }
 }

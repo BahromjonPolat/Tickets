@@ -7,15 +7,15 @@ class RecommendedLargeCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (_)=> DetailsPage()));
+      onTap: () {
+        Navigator.push(
+            context, MaterialPageRoute(builder: (_) => DetailsPage()));
       },
       child: Stack(
         children: [
           Container(
-            margin: EdgeInsets.symmetric(
-                horizontal: getProportionateScreenWidth(8.0)),
-            padding: EdgeInsets.all(getProportionateScreenWidth(16.0)),
+            margin: MyEdgeInsets.symmetric(horizontal: 8.0),
+            padding: MyEdgeInsets.all(16.0),
             height: getProportionateScreenHeight(256.0),
             width: getProportionateScreenWidth(327.0),
             decoration: MyDecoration.withImage(

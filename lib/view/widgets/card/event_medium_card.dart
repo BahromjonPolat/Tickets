@@ -9,7 +9,7 @@ class EventMediumCard extends StatelessWidget {
     return Container(
       height: getProportionateScreenHeight(172.0),
       width: getProportionateScreenWidth(287.0),
-      padding: EdgeInsets.all(getProportionateScreenWidth(16.0)),
+      padding: MyEdgeInsets.all(16.0),
       alignment: Alignment.bottomCenter,
       decoration: MyDecoration.withImage(
         imageUrl: 'https://source.unsplash.com/random/4',

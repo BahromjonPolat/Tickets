@@ -63,6 +63,7 @@ class TableEvent extends StatelessWidget {
         Links.random,
         fit: BoxFit.cover,
         width: getProportionateScreenWidth(96.0),
+        height: getProportionateScreenHeight(96.0),
       ),
     );
   }

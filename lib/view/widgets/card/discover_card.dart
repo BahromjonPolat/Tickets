@@ -18,9 +18,7 @@ class DiscoverCard extends StatelessWidget {
         elevation: 0.5,
         // shadowColor: color,
         color: ConstColors.white,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(100.0),
-        ),
+        shape:MyShape.setCircularBorder(radius: 100.0),
         child: Row(
           children: [
             Padding(

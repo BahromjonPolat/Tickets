@@ -23,9 +23,7 @@ class GlassButton extends StatelessWidget {
           padding: MyEdgeInsets.symmetric(horizontal: 14.0, vertical: 8.0),
           primary: ConstColors.white.withOpacity(0.4),
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(
-              getProportionateScreenWidth(16.0),
-            ),
+            borderRadius: MyBorderRadius.circular(radius: 16.0),
           ),
         ),
       ),

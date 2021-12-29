@@ -9,15 +9,11 @@ class EventSmallCard extends StatelessWidget {
     return Container(
       height: getProportionateScreenHeight(161.0),
       width: getProportionateScreenWidth(319.0),
-      margin: EdgeInsets.symmetric(
-        horizontal: getProportionateScreenWidth(8.0),
-      ),
-      padding: EdgeInsets.symmetric(
-          horizontal: getProportionateScreenWidth(16.0),
-          vertical: getProportionateScreenHeight(13.0)),
+      margin: MyEdgeInsets.symmetric(horizontal: 8.0),
+      padding: MyEdgeInsets.symmetric(horizontal: 16, vertical: 13.0),
       alignment: Alignment.bottomCenter,
       decoration: MyDecoration.withImage(
-        imageUrl: 'https://source.unsplash.com/random/4',
+        imageUrl: Links.random,
         color: ConstColors.greyer,
         radius: 16.0,
       ),
@@ -49,7 +45,7 @@ class EventSmallCard extends StatelessWidget {
             weight: FontWeight.w600,
             size: 15.0,
           ),
-          SizedBox(width: getProportionateScreenWidth(6.72)),
+          MySizedBox(width: 6.72),
           SvgPicture.asset(AssetIcons.chevronRight, color: ConstColors.white)
         ],
       ),
