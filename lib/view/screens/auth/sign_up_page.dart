@@ -35,6 +35,8 @@ class SignUpPage extends StatelessWidget {
           obscureText: true,
           assetIcon: AssetIcons.key,
         ),
+        MySizedBox(height: 24.0),
+        DefaultButton(onPressed: () {}, label: 'Sign Up'),
       ],
     );
   }

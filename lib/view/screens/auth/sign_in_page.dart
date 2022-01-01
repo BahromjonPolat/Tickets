@@ -17,7 +17,6 @@ class SignInPage extends StatelessWidget {
           inputType: TextInputType.emailAddress,
           inputAction: TextInputAction.next,
           assetIcon: AssetIcons.email,
-
         ),
         MySizedBox(height: 12.0),
         CustomFormField(
@@ -28,6 +27,16 @@ class SignInPage extends StatelessWidget {
           obscureText: true,
           assetIcon: AssetIcons.key,
         ),
+        Align(
+          alignment: Alignment.centerRight,
+          child: MyTextButton(
+            onPressed: () {},
+            label: 'Forgot password?',
+            padding: 8.0,
+          ),
+        ),
+
+        DefaultButton(onPressed: () {}, label: 'Login'),
       ],
     );
   }
