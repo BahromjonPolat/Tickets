@@ -18,10 +18,7 @@ class AuthPage extends StatelessWidget {
             children: [
               SizedBox(
                 height: MediaQuery.of(context).size.height,
-                child: Form(
-                  key: _authProvider.formKey,
-                  child: _authProvider.currentPage,
-                ),
+                child: _authProvider.isLogin ? SignInPage() :SignUpPage(),
               ),
               _setTitle(),
               _buildPageChangingButton(),

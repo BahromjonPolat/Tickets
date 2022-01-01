@@ -19,6 +19,13 @@ class AuthProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  void onPressed() {
+    if (_formKey.currentState!.validate()) {
+      print('Clicked');
+      Fluttertoast.showToast(msg: 'Please, Fill');
+    }
+  }
+
   Widget get currentPage => _currentPage;
 
   get formKey => _formKey;

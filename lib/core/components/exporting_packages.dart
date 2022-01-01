@@ -73,6 +73,7 @@ export 'package:provider/provider.dart';
 export 'package:google_maps_flutter/google_maps_flutter.dart';
 export 'package:flutter_polyline_points/flutter_polyline_points.dart';
 export 'package:dio/dio.dart';
+export 'package:fluttertoast/fluttertoast.dart';
 
 // Providers
 export 'package:ticket/providers/bottom_nav_bar_provider.dart';
