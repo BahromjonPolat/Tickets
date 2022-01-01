@@ -7,6 +7,7 @@ class CustomFormField extends StatelessWidget {
   TextInputAction inputAction;
   TextInputType inputType;
   bool obscureText;
+  String assetIcon;
 
   CustomFormField({
     Key? key,
@@ -15,6 +16,7 @@ class CustomFormField extends StatelessWidget {
     this.inputType = TextInputType.text,
     this.hint = '',
     this.obscureText = false,
+    this.assetIcon = AssetIcons.userInactive,
   }) : super(key: key);
 
   @override
@@ -25,8 +27,12 @@ class CustomFormField extends StatelessWidget {
         controller: controller,
         textInputAction: inputAction,
         keyboardType: inputType,
-        decoration: CustomInputDecoration.outlineDecoration(hint: hint),
-        style: CustomInputDecoration.setTextStyle(ConstColors.black),
+        obscureText: obscureText,
+        decoration: CustomInputDecoration.outlineDecoration(
+          hint: hint,
+          assetIcon: assetIcon,
+        ),
+        style: CustomInputDecoration.setTextStyle(ConstColors.greyer),
       ),
     );
   }

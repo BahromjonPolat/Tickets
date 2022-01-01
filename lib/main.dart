@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ticket/core/components/exporting_packages.dart';
+import 'package:ticket/providers/auth_provider.dart';
 
 void main() {
   runApp(
@@ -7,6 +8,7 @@ void main() {
       providers: [
         ChangeNotifierProvider(create: (_) => BottomNavBarProvider()),
         ChangeNotifierProvider(create: (_) => BottomTicketPriceProvider()),
+        ChangeNotifierProvider(create: (_) => AuthProvider()),
       ],
       child: const MyApp(),
     ),

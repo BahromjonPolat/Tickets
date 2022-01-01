@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:ticket/core/components/exporting_packages.dart';
 
 class CustomInputDecoration {
-  static InputDecoration outlineDecoration({String hint = ''}) {
+  static InputDecoration outlineDecoration({
+    String hint = '',
+    String? assetIcon,
+  }) {
     return InputDecoration(
       fillColor: ConstColors.white,
       filled: true,
@@ -12,7 +15,7 @@ class CustomInputDecoration {
       hintStyle: setTextStyle(ConstColors.grey),
       contentPadding: EdgeInsets.zero,
       prefixIcon: SvgPicture.asset(
-        AssetIcons.search,
+        assetIcon!,
         fit: BoxFit.none,
         color: ConstColors.greyer,
       ),

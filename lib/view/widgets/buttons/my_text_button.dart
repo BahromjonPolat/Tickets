@@ -4,11 +4,13 @@ import 'package:ticket/core/components/exporting_packages.dart';
 class MyTextButton extends StatelessWidget {
   VoidCallback onPressed;
   String label;
+  double padding;
 
   MyTextButton({
     Key? key,
     required this.onPressed,
     required this.label,
+    this.padding = 0.0,
   }) : super(key: key);
 
   @override
@@ -23,7 +25,7 @@ class MyTextButton extends StatelessWidget {
       ),
       style: TextButton.styleFrom(
         primary: ConstColors.red,
-        padding: EdgeInsets.zero,
+        padding: MyEdgeInsets.symmetric(horizontal: padding),
         alignment: Alignment.centerLeft,
       ),
     );

@@ -13,7 +13,7 @@ class SplashScreenPage extends StatelessWidget {
     SizeConfig().init(context);
     Timer(const Duration(seconds: 2), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (_) => HomePage()));
+          context, MaterialPageRoute(builder: (_) => AuthPage()));
     });
     return Scaffold(
       body: Container(

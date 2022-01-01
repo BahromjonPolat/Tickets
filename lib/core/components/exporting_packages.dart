@@ -24,6 +24,7 @@ export 'package:ticket/view/widgets/card/event_large_card.dart';
 export 'package:ticket/view/widgets/buttons/my_icon_button.dart';
 export 'package:ticket/view/widgets/buttons/white_button.dart';
 export 'package:ticket/view/widgets/buttons/my_text_button.dart';
+export 'package:ticket/view/widgets/buttons/auth_change_page_button.dart';
 export 'package:ticket/view/widgets/text/text_with_icon.dart';
 export 'package:ticket/view/widgets/card/event_medium_card.dart';
 export 'package:ticket/view/widgets/card/event_small_card.dart';
@@ -76,6 +77,8 @@ export 'package:dio/dio.dart';
 // Providers
 export 'package:ticket/providers/bottom_nav_bar_provider.dart';
 export 'package:ticket/providers/details_page_ticket_price_provider.dart';
+export 'package:ticket/providers/auth_provider.dart';
+
 
 // Themes
 export 'package:ticket/core/themes/main_theme.dart';

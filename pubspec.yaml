@@ -54,6 +54,7 @@ flutter:
     - assets/icons/Tags/
     - assets/icons/Tickets/
     - assets/icons/TopBar/
+    - assets/icons/Auth/
 
 
   # Fonts

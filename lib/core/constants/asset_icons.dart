@@ -55,4 +55,11 @@ class AssetIcons {
   static const String placeholder = 'assets/icons/TopBar/Placeholder.svg';
   static const String search = 'assets/icons/TopBar/Search.svg';
   static const String share = 'assets/icons/TopBar/Share.svg';
+
+  // Auth icons
+  static const String person = 'assets/icons/Auth/Person.svg';
+  static const String openedLock = 'assets/icons/Auth/OpenedLock.svg';
+  static const String closedLock = 'assets/icons/Auth/ClosedLock.svg';
+  static const String key = 'assets/icons/Auth/Key.svg';
+  static const String email = 'assets/icons/Auth/Email.svg';
 }
