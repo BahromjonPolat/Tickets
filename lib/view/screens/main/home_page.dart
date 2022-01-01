@@ -7,18 +7,17 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     _barProvider = context.watch();
     return  Scaffold(
-      bottomNavigationBar: MyBottomNavigationBar(),
+      bottomNavigationBar: const MyBottomNavigationBar(),
       body: _pageList[_barProvider.currentIndex],
     );
   }
 
-   List _pageList =[
-    HomePageBody(),
-    SearchPageBody(),
-    TicketsPageBody(),
-    ProfilePageBody(),
+   final List _pageList =[
+    const HomePageBody(),
+    const SearchPageBody(),
+    const TicketsPageBody(),
+    const ProfilePageBody(),
   ];
 }

@@ -8,6 +8,7 @@ export 'package:ticket/view/screens/main/profile/profile_page_body.dart';
 export 'package:ticket/view/screens/details/details_page.dart';
 export 'package:ticket/view/screens/tickets/tickets_time_page.dart';
 export 'package:ticket/view/screens/tickets/ticket_buying_page.dart';
+export 'package:ticket/view/screens/splash/splash_screen.dart';
 
 // Widgets
 export 'package:ticket/view/widgets/topBar/home_page_app_bar.dart';
@@ -30,7 +31,7 @@ export 'package:ticket/view/widgets/card/small_map_card.dart';
 export 'package:ticket/view/widgets/buttons/glass_button.dart';
 export 'package:ticket/view/widgets/buttons/default_button.dart';
 export 'package:ticket/view/widgets/topBar/details_page_app_bar.dart';
-export 'package:ticket/view/widgets/tables/table_with_circular_image.dart';
+export 'package:ticket/view/widgets/tables/table_performer.dart';
 export 'package:ticket/view/widgets/tables/table_ticket_date.dart';
 export 'package:ticket/view/widgets/tables/table_ticket_price.dart';
 export 'package:ticket/view/widgets/tables/table_event.dart';

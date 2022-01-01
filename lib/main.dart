@@ -6,7 +6,7 @@ void main() {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => BottomNavBarProvider()),
-        ChangeNotifierProvider(create: (_)=> BottomTicketPriceProvider()),
+        ChangeNotifierProvider(create: (_) => BottomTicketPriceProvider()),
       ],
       child: const MyApp(),
     ),
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       title: 'Ticket',
       debugShowCheckedModeBanner: false,
       theme: MainTheme.light,
-      home: HomePage(),
+      home: SplashScreenPage(),
     );
   }
 }

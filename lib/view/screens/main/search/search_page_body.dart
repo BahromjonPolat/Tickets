@@ -12,7 +12,7 @@ class SearchPageBody extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SearchTextField()
+          SearchTextField(),
         ],
       ),
     );

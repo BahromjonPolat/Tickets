@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ticket/core/components/exporting_packages.dart';
 
-class EventCircular extends StatelessWidget {
-  const EventCircular({Key? key}) : super(key: key);
+class TablePerformer extends StatelessWidget {
+  const TablePerformer({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
