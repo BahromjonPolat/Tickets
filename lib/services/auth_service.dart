@@ -16,8 +16,15 @@ class AuthService {
 
   Future signUp(UserModel user) async {
     try {
-      Response res =
-          await Dio().post('http://10.0.2.2:3000/users', data: user.toMap());
-    } catch (err) {}
+      Response res = await Dio().post(
+        'http://10.0.2.2:3000/users',
+        data: user.toMap(),
+      );
+      SharedPreferences pref = await SharedPreferences.getInstance();
+      await pref.setBool('isLogged', true);
+      await pref.setString('profile', res.data.toString());
+    } catch (err) {
+
+    }
   }
 }

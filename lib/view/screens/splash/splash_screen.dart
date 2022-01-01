@@ -3,18 +3,27 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:ticket/core/components/exporting_packages.dart';
 
-class SplashScreenPage extends StatelessWidget {
-  SplashScreenPage({Key? key}) : super(key: key);
+class SplashScreenPage extends StatefulWidget {
+  const SplashScreenPage({Key? key}) : super(key: key);
 
-  double _containerSize = 164.0;
+  @override
+  State<SplashScreenPage> createState() => _SplashScreenPageState();
+}
+
+class _SplashScreenPageState extends State<SplashScreenPage> {
+  final double _containerSize = 164.0;
+  @override
+  void initState() {
+    super.initState();
+    Timer(const Duration(seconds: 2), () {
+      _goToPage();
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-    Timer(const Duration(seconds: 2), () {
-      Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (_) => AuthPage()));
-    });
+    CustomNavigator().init(context);
     return Scaffold(
       body: Container(
         height: double.infinity,
@@ -68,4 +77,22 @@ class SplashScreenPage extends StatelessWidget {
           color: ConstColors.blue,
         ),
       );
+
+
+  void _goToPage() async {
+    SharedPreferences _pref = await SharedPreferences.getInstance();
+    bool isStarted = _pref.getBool("isLogged") ?? false;
+    if (!isStarted) {
+      _setNavigator(AuthPage());
+    } else {
+      _setNavigator(HomePage());
+    }
+  }
+
+  void _setNavigator(Widget page) {
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(builder: (_) => page),
+    );
+  }
+
 }

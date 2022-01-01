@@ -17,8 +17,6 @@ class AuthProvider extends ChangeNotifier {
     if (_formKey.currentState!.validate()) {
       final AuthService authService = AuthService();
 
-      authService.getAllUsers();
-
       String name = _nameController.text.trim();
       String email = _emailController.text.trim().toLowerCase();
       String password = _passwordController.text.trim();
@@ -33,11 +31,11 @@ class AuthProvider extends ChangeNotifier {
       );
 
       if (_isLogin) {
-
       } else {
-        authService.signUp(user);
+        authService.signUp(user).then((value) => {
+          CustomNavigator.pushReplacement(HomePage())
+        });
       }
-
     }
   }
 

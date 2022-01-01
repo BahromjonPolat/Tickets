@@ -57,6 +57,7 @@ export 'package:ticket/view/widgets/components/custom_input_decoration.dart';
 
 // Components
 export 'package:ticket/core/components/size_config.dart';
+export 'package:ticket/core/components/custom_navigator.dart';
 
 // Constants
 export 'package:ticket/core/constants/asset_icons.dart';
@@ -75,6 +76,7 @@ export 'package:google_maps_flutter/google_maps_flutter.dart';
 export 'package:flutter_polyline_points/flutter_polyline_points.dart';
 export 'package:dio/dio.dart';
 export 'package:fluttertoast/fluttertoast.dart';
+export 'package:shared_preferences/shared_preferences.dart';
 
 // Providers
 export 'package:ticket/providers/bottom_nav_bar_provider.dart';
