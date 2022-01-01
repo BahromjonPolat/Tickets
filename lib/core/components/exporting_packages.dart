@@ -9,6 +9,9 @@ export 'package:ticket/view/screens/details/details_page.dart';
 export 'package:ticket/view/screens/tickets/tickets_time_page.dart';
 export 'package:ticket/view/screens/tickets/ticket_buying_page.dart';
 export 'package:ticket/view/screens/splash/splash_screen.dart';
+export 'package:ticket/view/screens/auth/sign_in_page.dart';
+export 'package:ticket/view/screens/auth/sign_up_page.dart';
+export 'package:ticket/view/screens/auth/auth_page.dart';
 
 // Widgets
 export 'package:ticket/view/widgets/topBar/home_page_app_bar.dart';
