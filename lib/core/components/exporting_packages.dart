@@ -66,6 +66,7 @@ export 'package:ticket/core/constants/links.dart';
 
 // Models
 export 'package:ticket/models/discover_model.dart';
+export 'package:ticket/models/user_model.dart';
 
 // Installed Packages
 export 'package:flutter_svg/flutter_svg.dart';
@@ -79,6 +80,9 @@ export 'package:fluttertoast/fluttertoast.dart';
 export 'package:ticket/providers/bottom_nav_bar_provider.dart';
 export 'package:ticket/providers/details_page_ticket_price_provider.dart';
 export 'package:ticket/providers/auth_provider.dart';
+
+// Services
+export 'package:ticket/services/auth_service.dart';
 
 
 // Themes

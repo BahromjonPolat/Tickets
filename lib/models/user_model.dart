@@ -25,18 +25,18 @@ class UserModel {
     _password = json['password'];
     _imageUrl = json['imageUrl'];
     _isOnline = json['isOnline'];
-    _firstTime = json['firstTime'];
-    _lastAction = json['lastAction'];
+    _firstTime = json['firstTime'].toDate();
+    _lastAction = json['lastAction'].toDate();
   }
 
   Map<String, dynamic> toMap() => {
-        'id': _id,
+        // 'id': _id,
         'name': _name,
         'email': _email,
         'password': _password,
         'imageUrl': _imageUrl,
-        'firstTime': _firstTime,
-        'lastTime': _lastAction,
+        'firstTime': _firstTime.toString(),
+        'lastAction': _lastAction.toString(),
         'isOnline': _isOnline,
       };
 
