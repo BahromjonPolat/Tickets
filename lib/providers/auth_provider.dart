@@ -11,7 +11,11 @@ class AuthProvider extends ChangeNotifier {
 
   void onPageChanged() {
     _isLogin = !_isLogin;
-    _isLogin ? _currentPage = SignInPage() : SignUpPage();
+    if (_isLogin) {
+      _currentPage = SignInPage();
+    } else {
+      _currentPage = SignUpPage();
+    }
     notifyListeners();
   }
 

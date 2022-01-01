@@ -12,7 +12,7 @@ class CustomInputDecoration {
       border: _buildOutlineInputBorder(),
       enabledBorder: _buildOutlineInputBorder(),
       hintText: hint,
-      hintStyle: setTextStyle(ConstColors.grey),
+      hintStyle: setTextStyle(ConstColors.grey, weight: FontWeight.w500),
       contentPadding: EdgeInsets.zero,
       prefixIcon: SvgPicture.asset(
         assetIcon!,
@@ -27,8 +27,12 @@ class CustomInputDecoration {
         borderSide: BorderSide.none,
       );
 
-  static TextStyle setTextStyle(Color color) => TextStyle(
-        fontWeight: FontWeight.w600,
+  static TextStyle setTextStyle(
+    Color color, {
+    FontWeight weight = FontWeight.w600,
+  }) =>
+      TextStyle(
+        fontWeight: weight,
         fontSize: getProportionateScreenWidth(16.0),
         color: color,
       );

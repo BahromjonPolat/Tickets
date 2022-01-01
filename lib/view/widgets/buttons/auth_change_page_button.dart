@@ -19,7 +19,7 @@ class PageChangingButton extends StatelessWidget {
         MyText(isLogin ? _loginText : _signUpText),
         MyTextButton(
           onPressed: onPressed,
-          label: isLogin ? 'Login' : 'Sign up',
+          label: !isLogin ? 'Login' : 'Sign up',
           padding: 12.0,
         ),
       ],

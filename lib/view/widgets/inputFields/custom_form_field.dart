@@ -32,7 +32,10 @@ class CustomFormField extends StatelessWidget {
           hint: hint,
           assetIcon: assetIcon,
         ),
-        style: CustomInputDecoration.setTextStyle(ConstColors.greyer),
+        style: CustomInputDecoration.setTextStyle(
+          ConstColors.greyer,
+          weight: FontWeight.w500,
+        ),
       ),
     );
   }

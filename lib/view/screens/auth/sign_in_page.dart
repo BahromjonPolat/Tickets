@@ -8,30 +8,27 @@ class SignInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     _authProvider = context.watch();
-    return Padding(
-      padding: MyEdgeInsets.symmetric(horizontal: 16.0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          CustomFormField(
-            hint: 'Email',
-            controller: _authProvider.emailController,
-            inputType: TextInputType.emailAddress,
-            inputAction: TextInputAction.next,
-            assetIcon: AssetIcons.email,
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        CustomFormField(
+          hint: 'Email',
+          controller: _authProvider.emailController,
+          inputType: TextInputType.emailAddress,
+          inputAction: TextInputAction.next,
+          assetIcon: AssetIcons.email,
 
-          ),
-          MySizedBox(height: 12.0),
-          CustomFormField(
-            hint: 'Password',
-            controller: _authProvider.passwordController,
-            inputType: TextInputType.visiblePassword,
-            inputAction: TextInputAction.done,
-            obscureText: true,
-            assetIcon: AssetIcons.key,
-          ),
-        ],
-      ),
+        ),
+        MySizedBox(height: 12.0),
+        CustomFormField(
+          hint: 'Password',
+          controller: _authProvider.passwordController,
+          inputType: TextInputType.visiblePassword,
+          inputAction: TextInputAction.done,
+          obscureText: true,
+          assetIcon: AssetIcons.key,
+        ),
+      ],
     );
   }
 }
