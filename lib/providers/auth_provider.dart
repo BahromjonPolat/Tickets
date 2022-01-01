@@ -4,9 +4,9 @@ import 'package:ticket/core/components/exporting_packages.dart';
 class AuthProvider extends ChangeNotifier {
   bool _isLogin = true;
   Widget _currentPage = SignInPage();
-  final TextEditingController nameController = TextEditingController();
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
 
   void onPageChanged() {
@@ -21,8 +21,15 @@ class AuthProvider extends ChangeNotifier {
 
   void onPressed() {
     if (_formKey.currentState!.validate()) {
-      print('Clicked');
-      Fluttertoast.showToast(msg: 'Please, Fill');
+      String name = _nameController.text.trim();
+      String email = _emailController.text.trim().toLowerCase();
+      String password = _passwordController.text.trim();
+
+      if (_isLogin) {
+
+      } else {
+
+      }
     }
   }
 
@@ -31,4 +38,10 @@ class AuthProvider extends ChangeNotifier {
   get formKey => _formKey;
 
   bool get isLogin => _isLogin;
+
+  TextEditingController get passwordController => _passwordController;
+
+  TextEditingController get emailController => _emailController;
+
+  TextEditingController get nameController => _nameController;
 }
