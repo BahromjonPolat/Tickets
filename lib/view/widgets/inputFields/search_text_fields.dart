@@ -11,8 +11,8 @@ class SearchTextField extends StatelessWidget {
       shape: MyShape.setCircularBorder(radius: 12.0),
       child: TextField(
         controller: _searchController,
-        decoration: _buildInputDecoration(),
-        style: _setTextStyle(ConstColors.black),
+        decoration: CustomInputDecoration.outlineDecoration(hint: 'Search'),
+        style: CustomInputDecoration.setTextStyle(ConstColors.black),
         textInputAction: TextInputAction.search,
         cursorColor: ConstColors.black,
         onSubmitted: _onSubmitted,
@@ -20,36 +20,7 @@ class SearchTextField extends StatelessWidget {
     );
   }
 
-  InputDecoration _buildInputDecoration() {
-    return InputDecoration(
-      fillColor: ConstColors.white,
-      filled: true,
-      border: _buildOutlineInputBorder(),
-      enabledBorder: _buildOutlineInputBorder(),
-      hintText: 'Search',
-      hintStyle: _setTextStyle(ConstColors.grey),
-      contentPadding: EdgeInsets.zero,
-      prefixIcon: SvgPicture.asset(
-        AssetIcons.search,
-        fit: BoxFit.none,
-        color: ConstColors.greyer,
-      ),
-    );
-  }
-
-  OutlineInputBorder _buildOutlineInputBorder() => OutlineInputBorder(
-        borderRadius: MyBorderRadius.circular(radius: 12.0),
-        borderSide: BorderSide.none,
-      );
-
-  TextStyle _setTextStyle(Color color) => TextStyle(
-        fontWeight: FontWeight.w600,
-        fontSize: getProportionateScreenWidth(16.0),
-        color: color,
-      );
-
   void _onSubmitted(String value) {
     print(value);
-
   }
 }

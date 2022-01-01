@@ -37,6 +37,7 @@ export 'package:ticket/view/widgets/tables/table_ticket_price.dart';
 export 'package:ticket/view/widgets/tables/table_event.dart';
 export 'package:ticket/view/widgets/tables/table_place.dart';
 export 'package:ticket/view/widgets/inputFields/search_text_fields.dart';
+export 'package:ticket/view/widgets/inputFields/custom_form_field.dart';
 
 // Sliver Widgets
 export 'package:ticket/view/widgets/slivers/sliver_sized_box.dart';
@@ -48,6 +49,7 @@ export 'package:ticket/view/widgets/components/event_info.dart';
 export 'package:ticket/view/widgets/components/my_sized_box.dart';
 export 'package:ticket/view/widgets/components/my_shape.dart';
 export 'package:ticket/view/widgets/components/my_border_radius.dart';
+export 'package:ticket/view/widgets/components/custom_input_decoration.dart';
 
 // Components
 export 'package:ticket/core/components/size_config.dart';
