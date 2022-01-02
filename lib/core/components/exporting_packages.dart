@@ -87,6 +87,7 @@ export 'package:photo_view/photo_view.dart';
 export 'package:ticket/providers/bottom_nav_bar_provider.dart';
 export 'package:ticket/providers/details_page_ticket_price_provider.dart';
 export 'package:ticket/providers/auth_provider.dart';
+export 'package:ticket/providers/search_provider.dart';
 
 // Services
 export 'package:ticket/services/auth_service.dart';
