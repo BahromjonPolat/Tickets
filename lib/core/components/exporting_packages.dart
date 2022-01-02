@@ -81,6 +81,7 @@ export 'package:flutter_polyline_points/flutter_polyline_points.dart';
 export 'package:dio/dio.dart';
 export 'package:fluttertoast/fluttertoast.dart';
 export 'package:shared_preferences/shared_preferences.dart';
+export 'package:photo_view/photo_view.dart';
 
 // Providers
 export 'package:ticket/providers/bottom_nav_bar_provider.dart';
