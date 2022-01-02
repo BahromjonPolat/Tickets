@@ -10,13 +10,25 @@ class SplashScreenPage extends StatefulWidget {
   State<SplashScreenPage> createState() => _SplashScreenPageState();
 }
 
-class _SplashScreenPageState extends State<SplashScreenPage> {
+class _SplashScreenPageState extends State<SplashScreenPage>
+    with TickerProviderStateMixin {
   final double _containerSize = 164.0;
+
+  late AnimationController _animationController;
+
   @override
   void initState() {
     super.initState();
+    _animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(seconds: 2),
+      lowerBound: 0.0,
+      upperBound: 1.0,
+    );
+
+    _animationController.forward();
     Timer(const Duration(seconds: 2), () {
-      _goToPage();
+      // _goToPage();
     });
   }
 
@@ -25,15 +37,19 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
     SizeConfig().init(context);
     CustomNavigator().init(context);
     return Scaffold(
-      body: Container(
+      body: SizedBox(
         height: double.infinity,
         width: double.infinity,
-        decoration: const BoxDecoration(
-          color: ConstColors.darkNavy,
-        ),
         child: Stack(
           alignment: Alignment.center,
           children: [
+            _showLogo(
+              alignment: Alignment(
+                _animationController.value * 6.0,
+                _animationController.value * 3.0,
+              ),
+              color: ConstColors.black,
+            ),
             _showLogo(),
             _showLabel(),
             _setOwnerName(),
@@ -43,17 +59,21 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
     );
   }
 
-  AnimatedContainer _showLogo() {
+  AnimatedContainer _showLogo({
+    Alignment alignment = Alignment.center,
+    Color color = ConstColors.blue,
+  }) {
     return AnimatedContainer(
+      alignment: alignment,
       duration: const Duration(seconds: 2),
       height: getProportionateScreenHeight(_containerSize),
       width: getProportionateScreenWidth(_containerSize),
-      curve: Curves.easeInOutExpo,
+      curve: Curves.bounceOut,
       child: SvgPicture.asset(
         AssetIcons.ticket,
-        // height: getProportionateScreenHeight(_containerSize),
-        // width: getProportionateScreenWidth(_containerSize),
-        color: ConstColors.blue,
+        height: getProportionateScreenHeight(140.0),
+        width: getProportionateScreenWidth(140.0),
+        color: color,
       ),
     );
   }
@@ -73,17 +93,16 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
   Positioned _setOwnerName() => Positioned(
         bottom: getProportionateScreenHeight(24.0),
         child: MyText(
-          'By Bakromjon Polat',
+          'By Bakhromjon Polat',
           color: ConstColors.blue,
         ),
       );
-
 
   void _goToPage() async {
     SharedPreferences _pref = await SharedPreferences.getInstance();
     bool isStarted = _pref.getBool("isLogged") ?? false;
     if (!isStarted) {
-      _setNavigator(AuthPage());
+      _setNavigator(HomePage());
     } else {
       _setNavigator(HomePage());
     }
@@ -94,5 +113,4 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
       MaterialPageRoute(builder: (_) => page),
     );
   }
-
 }
