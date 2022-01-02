@@ -95,3 +95,4 @@ export 'package:ticket/core/themes/main_theme.dart';
 // Others
 export 'package:flutter/services.dart';
 export 'package:ticket/core/data/discover_list.dart';
+export 'package:ticket/core/data/event_data.dart';

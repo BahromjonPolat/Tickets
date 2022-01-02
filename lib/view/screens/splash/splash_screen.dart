@@ -28,7 +28,7 @@ class _SplashScreenPageState extends State<SplashScreenPage>
 
     _animationController.forward();
     Timer(const Duration(seconds: 2), () {
-      // _goToPage();
+      _goToPage();
     });
   }
 

@@ -3,17 +3,33 @@ class EventModel {
   late String _title;
   late String _genre;
   late String _updates;
+  late String _imageUrl;
   late String _details;
   late double _minPrice;
   late double _maxPrice;
+  late DateTime _dateTime;
 
   EventModel(
     this._title,
     this._genre,
     this._updates,
     this._details,
+    this._imageUrl,
     this._minPrice,
     this._maxPrice,
+    this._dateTime,
+  );
+
+  EventModel.withId(
+    this._id,
+    this._title,
+    this._genre,
+    this._updates,
+    this._details,
+    this._imageUrl,
+    this._minPrice,
+    this._maxPrice,
+    this._dateTime,
   );
 
   EventModel.fromJson(Map<String, dynamic> json) {
@@ -24,6 +40,8 @@ class EventModel {
     _details = json['details'];
     _maxPrice = json['maxPrice'];
     _minPrice = json['minPrice'];
+    _imageUrl = json['imageUrl'];
+    _dateTime = json['dateTime'].toDate();
   }
 
   Map<String, dynamic> toJson() => {
@@ -33,6 +51,8 @@ class EventModel {
         'details': _details,
         'minPrice': _minPrice,
         'maxPrice': _maxPrice,
+        'imageUrl': _imageUrl,
+        'dateTime': _dateTime.toString(),
       };
 
   String get id => _id;
@@ -47,5 +67,9 @@ class EventModel {
 
   String get updates => _updates;
 
+  String get imageUrl => _imageUrl;
+
   String get genre => _genre;
+
+  DateTime get dateTime => _dateTime;
 }
