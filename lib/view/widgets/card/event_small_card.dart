@@ -2,10 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:ticket/core/components/exporting_packages.dart';
 
 class EventSmallCard extends StatelessWidget {
-  const EventSmallCard({Key? key}) : super(key: key);
+  EventModel eventModel;
+
+  EventSmallCard({required this.eventModel, Key? key}) : super(key: key);
+
+  late BuildContext _context;
 
   @override
   Widget build(BuildContext context) {
+    _context = context;
     return Container(
       height: getProportionateScreenHeight(161.0),
       width: getProportionateScreenWidth(319.0),
@@ -13,7 +18,7 @@ class EventSmallCard extends StatelessWidget {
       padding: MyEdgeInsets.symmetric(horizontal: 16, vertical: 13.0),
       alignment: Alignment.bottomCenter,
       decoration: MyDecoration.withImage(
-        imageUrl: Links.random,
+        imageUrl: eventModel.imageUrl,
         color: ConstColors.greyer,
         radius: 16.0,
       ),
@@ -23,7 +28,7 @@ class EventSmallCard extends StatelessWidget {
         children: [
           EventInfo(
             alignment: MainAxisAlignment.start,
-            label: 'Bright light Music Festival',
+            label: eventModel.title,
             textList: [
               TextWithIcon(AssetIcons.musicTag, 'Electronica'),
             ],
@@ -36,7 +41,11 @@ class EventSmallCard extends StatelessWidget {
 
   TextButton _buildTextButton() {
     return TextButton(
-      onPressed: () {},
+      onPressed: () {
+
+        Navigator.push(_context,
+            MaterialPageRoute(builder: (_) => DetailsPage(eventModel)));
+      },
       child: Row(
         children: [
           MyText(

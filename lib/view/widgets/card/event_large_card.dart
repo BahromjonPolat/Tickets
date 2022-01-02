@@ -2,14 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:ticket/core/components/exporting_packages.dart';
 
 class RecommendedLargeCard extends StatelessWidget {
-  const RecommendedLargeCard({Key? key}) : super(key: key);
+  EventModel eventModel;
+
+  RecommendedLargeCard(this.eventModel, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (_) => DetailsPage()));
+        Navigator.push(context,
+            MaterialPageRoute(builder: (_) => DetailsPage(eventModel)));
       },
       child: Stack(
         children: [
@@ -19,7 +21,7 @@ class RecommendedLargeCard extends StatelessWidget {
             height: getProportionateScreenHeight(256.0),
             width: getProportionateScreenWidth(327.0),
             decoration: MyDecoration.withImage(
-              imageUrl: Links.random + '0',
+              imageUrl: eventModel.imageUrl,
               radius: 16.0,
               color: ConstColors.primaryOrange.withOpacity(0.2),
             ),
@@ -35,10 +37,13 @@ class RecommendedLargeCard extends StatelessWidget {
                 ),
                 SizedBox(height: getProportionateScreenHeight(5.0)),
                 EventInfo(
-                  label: 'Bright light Music Festival',
+                  label: eventModel.title,
                   textList: [
-                    TextWithIcon(AssetIcons.musicTag, 'Indie Rock'),
-                    TextWithIcon(AssetIcons.ticket, 'Indie Rock'),
+                    TextWithIcon(AssetIcons.musicTag, eventModel.genre),
+                    TextWithIcon(
+                      AssetIcons.ticket,
+                      '\$${eventModel.minPrice} - \$${eventModel.maxPrice}',
+                    ),
                   ],
                 ),
               ],

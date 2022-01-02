@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="uz.mirrikh.ticket">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="ticket"
         android:name="${applicationName}"

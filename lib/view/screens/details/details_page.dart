@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:ticket/core/components/exporting_packages.dart';
 
 class DetailsPage extends StatelessWidget {
-  DetailsPage({Key? key}) : super(key: key);
+  EventModel eventModel;
+
+  DetailsPage(this.eventModel, {Key? key}) : super(key: key);
   final ScrollController _scrollController = ScrollController();
 
   late BottomTicketPriceProvider _provider;
@@ -22,7 +24,7 @@ class DetailsPage extends StatelessWidget {
         child: CustomScrollView(
           controller: _scrollController,
           slivers: [
-            DetailsPageAppBar(),
+            DetailsPageAppBar(eventModel: eventModel),
             _setEventInfo(),
             _showMoreInfo(),
           ],
@@ -51,7 +53,8 @@ class DetailsPage extends StatelessWidget {
                 children: [
                   _setTitle('Details'),
                   MySizedBox(height: 8.0),
-                  MyText(_detailText, size: 15.0, weight: FontWeight.w400),
+                  MyText(eventModel.details,
+                      size: 15.0, weight: FontWeight.w400),
                   MyTextButton(onPressed: () {}, label: 'More'),
                   MySizedBox(height: 8.0),
                   _setCategory('Updates', AssetIcons.notify),
@@ -61,7 +64,8 @@ class DetailsPage extends StatelessWidget {
                     color: ConstColors.grey68,
                     weight: FontWeight.w700,
                   ),
-                  MyText(_detailText, size: 15.0, weight: FontWeight.w400),
+                  MyText(eventModel.updates,
+                      size: 15.0, weight: FontWeight.w400),
                   MyTextButton(onPressed: () {}, label: 'More'),
                   MySizedBox(height: 32.0),
                   _setTitle('Location'),
@@ -111,7 +115,7 @@ class DetailsPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               MyText(
-                'Brightlight Festival',
+                eventModel.title,
                 size: 28.0,
                 weight: FontWeight.w700,
                 color: ConstColors.white,
@@ -126,9 +130,12 @@ class DetailsPage extends StatelessWidget {
               ),
               _showAddress(),
               MySizedBox(height: 14.0),
-              _setTextWithIcon(AssetIcons.musicTag, 'Indie Rock'),
+              _setTextWithIcon(AssetIcons.musicTag, eventModel.genre),
               MySizedBox(height: 15.0),
-              _setTextWithIcon(AssetIcons.ticket, '\$40 - 90'),
+              _setTextWithIcon(
+                AssetIcons.ticket,
+                '\$${eventModel.minPrice} - \$${eventModel.maxPrice}',
+              ),
               MySizedBox(height: 15.0),
               _setTextWithIcon(AssetIcons.organizer, 'Club Kiss'),
             ],

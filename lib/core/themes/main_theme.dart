@@ -11,6 +11,12 @@ class MainTheme {
         elevation: 0.0,
         primary: ConstColors.red,
       ),
+
     ),
+
+    appBarTheme: const AppBarTheme(
+      backgroundColor: Colors.transparent,
+      elevation: 0.0,
+    )
   );
 }

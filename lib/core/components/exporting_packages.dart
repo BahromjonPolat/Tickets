@@ -16,6 +16,7 @@ export 'package:ticket/view/screens/auth/auth_page.dart';
 // Widgets
 export 'package:ticket/view/widgets/topBar/home_page_app_bar.dart';
 export 'package:ticket/view/widgets/topBar/tickets_time_app_bar.dart';
+export 'package:ticket/view/widgets/topBar/search_page_app_bar.dart';
 export 'package:ticket/view/widgets/bottomBar/my_bottom_navigation_bar.dart';
 export 'package:ticket/view/widgets/bottomBar/tickets_price_dark.dart';
 export 'package:ticket/view/widgets/bottomBar/ticket_price_light.dart';
@@ -24,6 +25,7 @@ export 'package:ticket/view/widgets/card/event_large_card.dart';
 export 'package:ticket/view/widgets/buttons/my_icon_button.dart';
 export 'package:ticket/view/widgets/buttons/white_button.dart';
 export 'package:ticket/view/widgets/buttons/my_text_button.dart';
+export 'package:ticket/view/widgets/buttons/search_page_button.dart';
 export 'package:ticket/view/widgets/buttons/auth_change_page_button.dart';
 export 'package:ticket/view/widgets/text/text_with_icon.dart';
 export 'package:ticket/view/widgets/card/event_medium_card.dart';
@@ -47,7 +49,7 @@ export 'package:ticket/view/widgets/inputFields/custom_form_field.dart';
 export 'package:ticket/view/widgets/slivers/sliver_sized_box.dart';
 
 // Widget components
-export 'package:ticket/view/widgets/components/decoration_with_image.dart';
+export 'package:ticket/view/widgets/components/custom_decoration.dart';
 export 'package:ticket/view/widgets/components/my_edge_insets.dart';
 export 'package:ticket/view/widgets/components/event_info.dart';
 export 'package:ticket/view/widgets/components/my_sized_box.dart';

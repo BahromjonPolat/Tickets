@@ -7,14 +7,13 @@ class SearchPageBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: MyEdgeInsets.symmetric(horizontal: 16.0),
-      alignment: Alignment.center,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          SearchTextField(),
+      decoration: MyDecoration.withAssetImage(imageUrl: AssetImages.map),
+      child: CustomScrollView(
+        slivers: [
+          SearchPageAppBar(),
         ],
       ),
     );
   }
+  
 }

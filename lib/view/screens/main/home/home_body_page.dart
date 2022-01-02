@@ -96,12 +96,12 @@ class HomePageBody extends StatelessWidget {
       child: SizedBox(
         height: getProportionateScreenHeight(256.0),
         child: ListView.builder(
-            padding: EdgeInsets.symmetric(
-              horizontal: getProportionateScreenWidth(8.0),
-            ),
+            padding: MyEdgeInsets.symmetric(horizontal: 8),
             scrollDirection: Axis.horizontal,
+            itemCount: EventData.eventList.length,
             itemBuilder: (_, index) {
-              return const RecommendedLargeCard();
+              EventModel eventModel = EventData.eventList[index];
+              return RecommendedLargeCard(eventModel);
             }),
       ),
     );
@@ -111,10 +111,12 @@ class HomePageBody extends StatelessWidget {
         child: SizedBox(
           height: getProportionateScreenHeight(161.0),
           child: ListView.builder(
+            itemCount: EventData.eventList.length,
               padding: MyEdgeInsets.symmetric(horizontal: 8.0),
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
-                return const EventSmallCard();
+              EventModel eventModel = EventData.eventList[index];
+                return  EventSmallCard(eventModel: eventModel);
               }),
         ),
       );

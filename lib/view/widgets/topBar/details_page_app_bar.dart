@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:ticket/core/components/exporting_packages.dart';
 
 class DetailsPageAppBar extends StatelessWidget with PreferredSizeWidget {
-  DetailsPageAppBar({Key? key}) : super(key: key);
+
+  EventModel eventModel;
+  DetailsPageAppBar({required this.eventModel,Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,11 +13,11 @@ class DetailsPageAppBar extends StatelessWidget with PreferredSizeWidget {
       backgroundColor: ConstColors.darkNavy,
       pinned: true,
       // floating: true,
-      flexibleSpace: const FlexibleSpaceBar(
+      flexibleSpace:  FlexibleSpaceBar(
         background: FadeInImage(
           fit: BoxFit.cover,
-          placeholder: AssetImage(AssetImages.emptyFilter),
-          image: NetworkImage(Links.random),
+          placeholder: const AssetImage(AssetImages.emptyFilter),
+          image: NetworkImage(eventModel.imageUrl),
         ),
       ),
       actions: [
