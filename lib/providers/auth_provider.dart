@@ -27,14 +27,15 @@ class AuthProvider extends ChangeNotifier {
         'default',
         DateTime.now(),
         DateTime.now(),
+        
         false,
       );
 
       if (_isLogin) {
       } else {
-        authService.signUp(user).then((value) => {
-          CustomNavigator.pushReplacement(HomePage())
-        });
+        authService
+            .signUp(user)
+            .then((value) => {CustomNavigator.pushReplacement(HomePage())});
       }
     }
   }
