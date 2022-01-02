@@ -23,7 +23,7 @@
   <img src="./screenshots/List.jpg" width=45% />
 </p>
 
-<a href="./release/app-release.apk">Download now</a>
+<a href="./release/app-release.apk?raw=true">Download now</a>
 
 
 
