@@ -20,61 +20,59 @@ class HomePageBody extends StatelessWidget {
         SliverSizedBox.setHeight(56.0),
         _showLocationIcon(),
         _setCategory('Upcoming', AssetIcons.right),
-        SliverSizedBox.setHeight(25.0),
-        _showUpcomingLayout(),
-        _showUpcomingLayout(),
-        _showUpcomingLayout(),
+        SliverSizedBox.setHeight(24.0),
+        _upcomingList(),
         SliverSizedBox.setHeight(25.0),
       ],
     );
   }
 
-  SliverToBoxAdapter _showUpcomingLayout() => SliverToBoxAdapter(
-        child: Padding(
-          padding: MyEdgeInsets.symmetric(horizontal: 16.0),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              SizedBox(
-                height: getProportionateScreenHeight(276.0),
-                width: getProportionateScreenWidth(40.0),
-                child: Column(
-                  children: [
-                    DateCard(dateTime: DateTime.now()),
-                    Flexible(
-                      child: ListView.builder(
-                          itemCount: 12,
-                          padding: MyEdgeInsets.symmetric(vertical: 8.0),
-                          itemBuilder: (context, index) {
-                            return Container(
-                              alignment: Alignment.center,
-                              height: getProportionateScreenHeight(4.0),
-                              width: getProportionateScreenWidth(4.0),
-                              margin: MyEdgeInsets.symmetric(
-                                vertical: 8.0,
-                                horizontal: 18.0,
-                              ),
-                              decoration: BoxDecoration(
-                                color: ConstColors.grey,
-                                borderRadius: BorderRadius.circular(100.0),
-                              ),
-                            );
-                          }),
-                    )
-                  ],
-                ),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
+  SliverList _upcomingList() => SliverList(
+        delegate: SliverChildListDelegate(
+          List.generate(
+            EventData.eventList.length,
+            (index) => _showUpcomingLayout(EventData.eventList[index]),
+          ),
+        ),
+      );
+
+  _showUpcomingLayout(EventModel event) => Padding(
+        padding: MyEdgeInsets.symmetric(horizontal: 16.0),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            SizedBox(
+              height: getProportionateScreenHeight(276.0),
+              width: getProportionateScreenWidth(40.0),
+              child: Column(
                 children: [
-                  EventMediumCard(),
-                  SizedBox(height: getProportionateScreenHeight(16.0)),
-                  EventMoreCard(),
+                  DateCard(dateTime: DateTime.now()),
+                  Flexible(
+                    child: ListView.builder(
+                        itemCount: 12,
+                        padding: MyEdgeInsets.symmetric(vertical: 8.0),
+                        itemBuilder: (context, index) {
+                          return Padding(
+                            padding: MyEdgeInsets.symmetric(vertical: 8.0),
+                            child: SvgPicture.asset(AssetIcons.placeholder,
+                            height: 4,
+                            ),
+                          );
+                        }),
+                  )
                 ],
               ),
-            ],
-          ),
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                EventMediumCard(event),
+                SizedBox(height: getProportionateScreenHeight(16.0)),
+                EventMoreCard(image: event.imageUrl),
+              ],
+            ),
+          ],
         ),
       );
 
@@ -111,12 +109,12 @@ class HomePageBody extends StatelessWidget {
         child: SizedBox(
           height: getProportionateScreenHeight(161.0),
           child: ListView.builder(
-            itemCount: EventData.eventList.length,
+              itemCount: EventData.eventList.length,
               padding: MyEdgeInsets.symmetric(horizontal: 8.0),
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
-              EventModel eventModel = EventData.eventList[index];
-                return  EventSmallCard(eventModel: eventModel);
+                EventModel eventModel = EventData.eventList[index];
+                return EventSmallCard(eventModel: eventModel);
               }),
         ),
       );

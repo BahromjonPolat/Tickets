@@ -156,10 +156,12 @@ class DetailsPage extends StatelessWidget {
             child: ListView.builder(
                 padding: MyEdgeInsets.symmetric(horizontal: 8.0),
                 scrollDirection: Axis.horizontal,
+                itemCount: EventData.eventList.length,
                 itemBuilder: (context, index) {
+                  EventModel event = EventData.eventList[index];
                   return Padding(
                     padding: MyEdgeInsets.symmetric(horizontal: 8.0),
-                    child: const EventMediumCard(),
+                    child: EventMediumCard(event),
                   );
                 }),
           )

@@ -6,7 +6,7 @@ class SearchPageBody extends StatelessWidget {
   late double _height;
   late double _width;
   late SearchProvider _searchProvider;
-
+  
   @override
   Widget build(BuildContext context) {
     _searchProvider = context.watch();

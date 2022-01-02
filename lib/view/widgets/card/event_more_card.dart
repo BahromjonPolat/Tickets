@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:ticket/core/components/exporting_packages.dart';
 
 class EventMoreCard extends StatelessWidget {
-  const EventMoreCard({Key? key}) : super(key: key);
+  String image;
+
+  EventMoreCard({Key? key, required this.image}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,9 +13,10 @@ class EventMoreCard extends StatelessWidget {
       width: getProportionateScreenWidth(287.0),
       padding: MyEdgeInsets.symmetric(horizontal: 18.0),
       decoration: MyDecoration.withImage(
-          imageUrl: Links.random + '0',
-          radius: 12.0,
-          color: ConstColors.greyer),
+        imageUrl: image,
+        radius: 12.0,
+        color: ConstColors.greyer,
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

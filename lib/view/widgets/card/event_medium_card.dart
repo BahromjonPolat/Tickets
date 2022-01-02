@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:ticket/core/components/exporting_packages.dart';
 
 class EventMediumCard extends StatelessWidget {
-  const EventMediumCard({Key? key}) : super(key: key);
+  EventModel event;
+   EventMediumCard(this.event, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,15 +13,15 @@ class EventMediumCard extends StatelessWidget {
       padding: MyEdgeInsets.all(16.0),
       alignment: Alignment.bottomCenter,
       decoration: MyDecoration.withImage(
-        imageUrl: 'https://source.unsplash.com/random/4',
+        imageUrl: event.imageUrl,
         color: ConstColors.greyer,
         radius: 16.0,
       ),
       child: EventInfo(
-        label: 'Brightlight Music Festival',
+        label: event.title,
         textSize: 18.0,
         textList: [
-          TextWithIcon(AssetIcons.musicTag, 'Indie Rock'),
+          TextWithIcon(AssetIcons.musicTag, event.genre),
           TextWithIcon(AssetIcons.ticket, '\$40 - \$90'),
         ],
       ),
