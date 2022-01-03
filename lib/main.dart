@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
       title: 'Ticket',
       debugShowCheckedModeBanner: false,
       theme: MainTheme.light,
-      home: SplashScreenPage(),
+      home: AuthPage(),
     );
   }
 }

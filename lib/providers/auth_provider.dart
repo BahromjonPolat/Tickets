@@ -16,7 +16,6 @@ class AuthProvider extends ChangeNotifier {
   void onPressed() {
     if (_formKey.currentState!.validate()) {
       final AuthService authService = AuthService();
-
       String name = _nameController.text.trim();
       String email = _emailController.text.trim().toLowerCase();
       String password = _passwordController.text.trim();
@@ -27,15 +26,14 @@ class AuthProvider extends ChangeNotifier {
         'default',
         DateTime.now(),
         DateTime.now(),
-        
         false,
       );
 
       if (_isLogin) {
       } else {
-        authService
-            .signUp(user)
-            .then((value) => {CustomNavigator.pushReplacement(HomePage())});
+        authService.signUp(user).then((value) {
+          Fluttertoast.showToast(msg: value);
+        });
       }
     }
   }

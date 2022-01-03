@@ -102,7 +102,7 @@ class _SplashScreenPageState extends State<SplashScreenPage>
     SharedPreferences _pref = await SharedPreferences.getInstance();
     bool isStarted = _pref.getBool("isLogged") ?? false;
     if (!isStarted) {
-      _setNavigator(HomePage());
+      _setNavigator(AuthPage());
     } else {
       _setNavigator(HomePage());
     }
