@@ -30,6 +30,13 @@ class AuthProvider extends ChangeNotifier {
       );
 
       if (_isLogin) {
+        authService.signIn(email, password).then((value) {
+          if (value == 'Successful') {
+            CustomNavigator().pushReplacement(HomePage());
+          } else {
+            Fluttertoast.showToast(msg: value);
+          }
+        });
       } else {
         authService.signUp(user).then((value) {
           if (value == 'Successful') {

@@ -19,10 +19,21 @@ class AuthService {
     }
   }
 
-  Future signIn(String email, String password) async {
+  Future<String> signIn(String email, String password) async {
     try {
-      // Response res = await Dio().get('http://192.168.43.42:3000/users/$uid');
+      Response res = await Dio().post(NetworkLink.login, data: {
+        'email': email,
+        'password': password,
+      });
+      if (res.statusCode == 200) {
+        SharedPreferences pref = await SharedPreferences.getInstance();
+        await pref.setString('profile', res.data.toString());
+        await pref.setBool('isLogged', true);
+        return "Successful";
+      }
+
     } catch (err) {}
+    return "Wrong";
   }
 
   Future<String> signUp(UserModel user) async {

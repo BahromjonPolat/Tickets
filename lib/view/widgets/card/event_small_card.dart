@@ -42,9 +42,7 @@ class EventSmallCard extends StatelessWidget {
   TextButton _buildTextButton() {
     return TextButton(
       onPressed: () {
-
-        Navigator.push(_context,
-            MaterialPageRoute(builder: (_) => DetailsPage(eventModel)));
+        CustomNavigator().push(DetailsPage(eventModel));
       },
       child: Row(
         children: [

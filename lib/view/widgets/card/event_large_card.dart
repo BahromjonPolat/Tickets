@@ -10,8 +10,7 @@ class RecommendedLargeCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.push(context,
-            MaterialPageRoute(builder: (_) => DetailsPage(eventModel)));
+        CustomNavigator().push(DetailsPage(eventModel));
       },
       child: Stack(
         children: [
