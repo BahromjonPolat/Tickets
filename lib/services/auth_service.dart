@@ -3,7 +3,7 @@ import 'package:ticket/core/components/exporting_packages.dart';
 class AuthService {
   Future getAllUsers() async {
     try {
-      var res = await Dio().get('http://192.168.43.42:3000/users');
+      var res = await Dio().get('${NetworkLink.ipAddress}/users');
     } catch (err) {
       print(err);
     }
@@ -11,7 +11,7 @@ class AuthService {
 
   Future getUserById(String uid) async {
     try {
-      Response res = await Dio().get('http://192.168.43.42:3000/users/$uid');
+      Response res = await Dio().get('${NetworkLink.ipAddress}/users/$uid');
       print(res.data);
       UserModel userModel = UserModel.fromJson(res.data);
     } catch (err) {
@@ -22,17 +22,13 @@ class AuthService {
   Future signIn(String email, String password) async {
     try {
       // Response res = await Dio().get('http://192.168.43.42:3000/users/$uid');
-    } catch(err) {
-
-    }
+    } catch (err) {}
   }
 
   Future<String> signUp(UserModel user) async {
     try {
-      Response res = await Dio().post(
-        'http://192.168.43.42:3000/users',
-        data: user.toMap(),
-      );
+      Response res = await Dio()
+          .post('${NetworkLink.ipAddress}/users', data: user.toMap());
       if (res.statusCode == 200) {
         SharedPreferences pref = await SharedPreferences.getInstance();
         await pref.setBool('isLogged', true);

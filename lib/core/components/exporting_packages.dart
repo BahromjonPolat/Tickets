@@ -66,6 +66,7 @@ export 'package:ticket/core/constants/asset_icons.dart';
 export 'package:ticket/core/constants/colors.dart';
 export 'package:ticket/core/constants/asset_images.dart';
 export 'package:ticket/core/constants/links.dart';
+export 'package:ticket/core/constants/network_links.dart';
 
 // Models
 export 'package:ticket/models/discover_model.dart';
@@ -82,6 +83,7 @@ export 'package:dio/dio.dart';
 export 'package:fluttertoast/fluttertoast.dart';
 export 'package:shared_preferences/shared_preferences.dart';
 export 'package:photo_view/photo_view.dart';
+export 'package:device_info/device_info.dart';
 
 // Providers
 export 'package:ticket/providers/bottom_nav_bar_provider.dart';

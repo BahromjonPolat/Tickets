@@ -35,7 +35,7 @@ class _SplashScreenPageState extends State<SplashScreenPage>
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-    CustomNavigator.init(context);
+    CustomNavigator().init(context);
     return Scaffold(
       body: SizedBox(
         height: double.infinity,
@@ -104,7 +104,7 @@ class _SplashScreenPageState extends State<SplashScreenPage>
     if (!isStarted) {
       _setNavigator(AuthPage());
     } else {
-      _setNavigator(HomePage());
+      _setNavigator(AuthPage());
     }
   }
 

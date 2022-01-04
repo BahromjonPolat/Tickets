@@ -9,6 +9,7 @@ class AuthPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
+    CustomNavigator().init(context);
     _authProvider = context.watch();
     return Scaffold(
       body: SingleChildScrollView(

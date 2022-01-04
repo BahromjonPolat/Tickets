@@ -38,9 +38,12 @@ class SignUpPage extends StatelessWidget {
             assetIcon: AssetIcons.key,
           ),
           MySizedBox(height: 24.0),
-          DefaultButton(onPressed: () {
-            _authProvider.onPressed();
-          }, label: 'Sign Up'),
+          DefaultButton(
+            onPressed: () {
+              _authProvider.onPressed();
+            },
+            label: 'Sign Up',
+          ),
         ],
       ),
     );
