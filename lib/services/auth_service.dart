@@ -34,6 +34,8 @@ class AuthService {
         await pref.setBool('isLogged', true);
         await pref.setString('profile', res.data.toString());
         return "Successful";
+      } else {
+        return res.data['message'];
       }
     } catch (err) {
       print(err);

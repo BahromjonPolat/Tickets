@@ -2,7 +2,7 @@
     package="uz.mirrikh.ticket">
     <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="ticket"
+        android:label="Get Tickets"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

@@ -8,7 +8,7 @@ void main() {
         ChangeNotifierProvider(create: (_) => BottomNavBarProvider()),
         ChangeNotifierProvider(create: (_) => BottomTicketPriceProvider()),
         ChangeNotifierProvider(create: (_) => AuthProvider()),
-        ChangeNotifierProvider(create: (_)=> SearchProvider()),
+        ChangeNotifierProvider(create: (_) => SearchProvider()),
       ],
       child: const MyApp(),
     ),
