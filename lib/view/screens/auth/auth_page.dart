@@ -4,6 +4,7 @@ import 'package:ticket/core/components/exporting_packages.dart';
 class AuthPage extends StatelessWidget {
   AuthPage({Key? key}) : super(key: key);
 
+  // Auth page sahifasida ishlash uchun
   late AuthProvider _authProvider;
 
   @override
